@@ -39,9 +39,9 @@ git clone https://github.com/EduMMorenolp/PetShopping
 
 # Autores
 - Eduardo M Moreno
-- Luis N/N
+- Luis Amaison
 - Emilse Antonella Ferreyra
-- Guillermo DArio Arias
+- Guillermo Dario Arias
 
 # Licencia
 Este proyecto está bajo la Licencia MIT - consulta el archivo LICENSE para más detalles.
