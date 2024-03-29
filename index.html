@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,39 +10,43 @@
 
     <header>
         <h1>PetShopping Logo</h1>
-        <ul>
-            <li>Inicio</li>
-            <li>Productos</li>
-            <li>Contacto</li>
-        </ul>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="inicio">
-
+            <!-- Contenido del inicio -->
         </section>
 
         <section id="productos">
+            <h2>Productos</h2>
             <div class="carrusel">
-                <h3> Productos </h3>
-                <img src="" alt="producto">
-                <img src="" alt="producto">
-                <img src="" alt="producto">
+                <img src="imagen1.jpg" alt="Producto 1">
+                <img src="imagen2.jpg" alt="Producto 2">
+                <img src="imagen3.jpg" alt="Producto 3">
             </div>
         </section>
 
         <section id="contacto">
-            <h3> Contacto </h3>
+            <h2>Contacto</h2>
             <form>
-                <label>Nombre</label>
-                <input type="text">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre">
+                <!-- Agrega aquí más campos de formulario -->
+                <button type="submit">Enviar</button>
             </form>
         </section>
     </main>
 
     <footer>
-        <h2> Pet Shopping </h2>
-        <p> 2024 Derechos reservados </p>
+        <h2>Pet Shopping</h2>
+        <p>© 2024 Todos los derechos reservados</p>
     </footer>
     
     <script src="/script.js"></script>
