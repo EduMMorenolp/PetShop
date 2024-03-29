@@ -1,0 +1,13 @@
+
+* {
+    padding: 5px;
+    top: 0;
+    background-color: antiquewhite;
+    font-size: 17px;
+}
+
+/** Header - Navbar */
+
+header {
+    display: flex;
+}
