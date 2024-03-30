@@ -1,6 +1,6 @@
-# PetShopping
+# PetShop
 
-PetShopping es un proyecto para una tienda virtual de productos para mascotas. Este repositorio contiene los archivos necesarios para el desarrollo del sitio web, incluyendo HTML, CSS y JavaScript.
+PetShop es un proyecto para una tienda virtual de productos para mascotas. Este repositorio contiene los archivos necesarios para el desarrollo del sitio web, incluyendo HTML, CSS y JavaScript.
 
 # Características
 - Página de inicio con información sobre la tienda.
