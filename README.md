@@ -23,7 +23,7 @@ Para ejecutar este proyecto localmente, necesitarás:
 1. Clona este repositorio en tu máquina local utilizando Git:
 
 ```
-git clone https://github.com/EduMMorenolp/PetShopping
+git clone https://github.com/EduMMorenolp/PetShop
 ```
 
 2. Abre el archivo index.html en tu navegador web.
