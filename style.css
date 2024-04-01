@@ -17,6 +17,7 @@ header {
   display: flex;
   position: sticky;
   top: 5px;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
 }
@@ -50,7 +51,6 @@ main {
 }
 
 section {
-  margin-bottom: 40px;
   background-color: #a9e6d8;
   width: 97%;
   height: 300px;
@@ -71,7 +71,7 @@ section#productos .carrusel {
 }
 
 #contacto {
-    width: 85%;
+  width: 85%;
 }
 
 /** Estilos para el footer */
