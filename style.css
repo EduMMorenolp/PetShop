@@ -1,72 +1,119 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /** Estilos generales */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
+  font-family: "Comic Neue", cursive;
+  background-color: #f2fbf9;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  max-width: 1200px;
 }
 
 /** Estilos para el header */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
+  background-color: #a9e6d8;
+  color: #1d4440;
+  border-radius: 30px;
+  padding: 5px;
+  display: flex;
+  position: sticky;
+  top: 5px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header h1 {
-    margin: 0;
+  font-size: medium;
+  margin: 0;
+  padding-left: 20px;
 }
 
 nav ul {
-    list-style-type: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+  display: inline;
+  margin-right: 20px;
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+  font-size: 14px;
+  color: #1d4440;
+  text-decoration: none;
 }
 
 /** Estilos para el main */
 main {
-    padding: 20px 0;
+  padding: 0 0 15px 0;
 }
 
 section {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
+  background-color: #a9e6d8;
+  width: 97%;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+section h2 {
+  font-size: medium;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+section#productos .carrusel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#contacto {
+    width: 85%;
 }
 
 /** Estilos para el footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+  background-color: #a9e6d8;
+  color: #1d4440;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer h5 {
+  margin: 0;
+}
+
+footer ul li {
+  display: inline;
+  margin-right: 5px;
+}
+
+footer ul li svg {
+  width: 24px;
+  height: 24px;
+  fill: #1d4440;
 }
 
 /** Estilos para los formularios */
 form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input[type="text"],
@@ -74,19 +121,19 @@ input[type="email"],
 input[type="password"],
 textarea,
 button {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+  background-color: #555;
 }
