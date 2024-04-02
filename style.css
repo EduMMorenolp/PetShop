@@ -53,7 +53,7 @@ main {
 section {
   background-color: #a9e6d8;
   width: 97%;
-  height: 300px;
+  height: 100%;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -136,4 +136,27 @@ button {
 
 button:hover {
   background-color: #555;
+}
+
+
+/** Estilos de Seccion INICIO */
+
+#inicio {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px;
+}
+
+.tarjetaOfertas {
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 20px; 
+  border: 2px solid black;
+  width: 28%;
+}
+
+#buscador input[type="text"] {
+  width: 80%;
+  border-radius: 5px;
 }
