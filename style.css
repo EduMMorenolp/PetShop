@@ -151,19 +151,33 @@ button:hover {
 .tarjetaOfertas {
   display: inline-block;
   padding: 10px;
-  margin-bottom: 20px; 
-  border: 2px solid black;
   width: 28%;
+  text-align: center;
+}
+
+.tarjetaOfertas img {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D4F3EB;
+}
+
+.tarjetaOfertas img:hover {
+  -ms-zoom: normal;
+  border-radius: 3px;
+  border: 1px solid #0B2826;
 }
 
 #buscador {
-  padding: 10px;
-  border: 3px solid black;
+  align-content: center;
+  padding: 5px;
   border-radius: 10px;
 }
 
 #buscador input[type="text"] {
-  width: 90%;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
   border-radius: 5px;
-  margin: 0 auto;
+  box-sizing: border-box;
 }
+
