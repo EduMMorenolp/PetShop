@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
     <title>PetShopping</title>
 
@@ -22,7 +23,7 @@
 <body>
 
     <header>
-        <h1>PetShopping</h1>
+        <h1>PetShop</h1>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -35,9 +36,32 @@
 
     <main>
         <section id="inicio">
-            <h2> Ofertas </h2>
-
-            <h2> Buscador </h2>
+            <div id="ofertas">
+                <h2>Ofertas</h2>
+                <div class="tarjetaOfertas">
+                    <img src="/img/productos/Ofert1.webp" alt="Producto">
+                    <h3>Producto 1</h3>
+                    <p>Precio: $10</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="tarjetaOfertas">
+                    <img src="/img/productos/Ofert2.webp" alt="Producto">
+                    <h3>Producto 2</h3>
+                    <p>Precio: $15</p>
+                    <button>Comprar</button>
+                </div>
+                <div class="tarjetaOfertas">
+                    <img src="/img/productos/Ofert3.webp" alt="Producto">
+                    <h3>Producto 3</h3>
+                    <p>Precio: $20</p>
+                    <button>Comprar</button>
+                </div>
+            </div>
+            <div id="buscador">
+                <h2> Buscador </h2>
+                <input type="text">
+                <button>Buscar</button>
+            </div>    
         </section>
 
         <section id="productos">
@@ -53,7 +77,7 @@
             <h2>Contacto</h2>
             <form>
                 <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre">
+                <input type="text" id="nombre" name="nombre" required>
                 <!-- Agrega aquí más campos de formulario -->
                 <button type="submit">Enviar</button>
             </form>

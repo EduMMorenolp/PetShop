@@ -17,6 +17,7 @@ header {
   display: flex;
   position: sticky;
   top: 5px;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
 }
@@ -50,10 +51,9 @@ main {
 }
 
 section {
-  margin-bottom: 40px;
   background-color: #a9e6d8;
   width: 97%;
-  height: 300px;
+  height: 100%;
   margin: 0 auto;
   border-radius: 10px;
 }
@@ -71,7 +71,7 @@ section#productos .carrusel {
 }
 
 #contacto {
-    width: 85%;
+  width: 85%;
 }
 
 /** Estilos para el footer */
@@ -137,3 +137,47 @@ button {
 button:hover {
   background-color: #555;
 }
+
+
+/** Estilos de Seccion INICIO */
+
+#inicio {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 10px;
+}
+
+.tarjetaOfertas {
+  display: inline-block;
+  padding: 10px;
+  width: 28%;
+  text-align: center;
+}
+
+.tarjetaOfertas img {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D4F3EB;
+}
+
+.tarjetaOfertas img:hover {
+  -ms-zoom: normal;
+  border-radius: 3px;
+  border: 1px solid #0B2826;
+}
+
+#buscador {
+  align-content: center;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#buscador input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
