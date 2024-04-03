@@ -9,3 +9,5 @@ Figma Boceto Web : https://www.figma.com/file/jOf4Ulvs9djb5bw7Rew1sg/Untitled?ty
 Fonts : https://fonts.google.com/selection/embed
 
 Iconos : https://fontawesome.com/
+
+Trello : https://trello.com/b/IsmsZJQY/proyecto-petshop
