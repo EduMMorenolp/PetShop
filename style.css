@@ -10,9 +10,9 @@ body {
 
 /** Estilos para el header */
 header {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
   padding: 5px;
   display: flex;
   position: sticky;
@@ -41,7 +41,7 @@ nav ul li {
 
 nav ul li a {
   font-size: 14px;
-  color: #1d4440;
+  color: #f2fbf9;
   text-decoration: none;
 }
 
@@ -59,6 +59,10 @@ section {
 }
 
 section h2 {
+  background-color: #20655d;
+  color: #f2fbf9;
+  border-radius: 5px;
+  padding: 5px;
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
@@ -76,9 +80,9 @@ section#productos .carrusel {
 
 /** Estilos para el footer */
 footer {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
   padding: 10px;
   display: flex;
   justify-content: space-around;
@@ -103,7 +107,7 @@ footer ul li {
 footer ul li svg {
   width: 24px;
   height: 24px;
-  fill: #1d4440;
+  fill: #f2fbf9;
 }
 
 /** Estilos para los formularios */
@@ -138,7 +142,6 @@ button:hover {
   background-color: #555;
 }
 
-
 /** Estilos de Seccion INICIO */
 
 #inicio {
@@ -156,15 +159,20 @@ button:hover {
 }
 
 .tarjetaOfertas img {
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
   width: 100%;
   border-radius: 3px;
-  border: 1px solid #D4F3EB;
+  border: 1px solid #d4f3eb;
 }
 
 .tarjetaOfertas img:hover {
-  -ms-zoom: normal;
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(209, 67, 67, 0.43);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(216, 45, 45, 0.43);
+  box-shadow: 0px 10px 40px 0px rgba(180, 47, 47, 0.43);
   border-radius: 3px;
-  border: 1px solid #0B2826;
+  border: 1px solid #0b2826;
 }
 
 #buscador {
@@ -181,3 +189,25 @@ button:hover {
   box-sizing: border-box;
 }
 
+.productos_todos {
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+
+  margin: 10px;
+}
+.imagen_productos img {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%;
+}
+.imagen_productos {
+  display: flex;
+  justify-content: center;
+
+  text-align: center;
+}
