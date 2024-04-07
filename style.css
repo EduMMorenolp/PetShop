@@ -2,6 +2,7 @@
 body {
   font-family: "Comic Neue", cursive;
   background-color: #f2fbf9;
+  font-size: 1em;
 }
 
 .container {
@@ -22,10 +23,11 @@ header {
   align-items: center;
 }
 
-header h1 {
-  font-size: medium;
-  margin: 0;
-  padding-left: 20px;
+header img {
+  width: 10%;
+  padding-left: 10px;
+  fill: rgb(212, 243, 235);
+  stroke: rgba(180, 47, 47, 0.43);
 }
 
 nav ul {
@@ -40,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 14px;
+  font-size: 1em;
   color: #f2fbf9;
   text-decoration: none;
 }
@@ -83,7 +85,7 @@ footer {
   background-color: #1d4440;
   color: #f2fbf9;
   border-radius: 5px;
-  padding: 10px;
+  padding: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -110,6 +112,28 @@ footer ul li svg {
   fill: #f2fbf9;
 }
 
+/* Estilos para Facebook */
+.facebook:hover svg {
+  fill: #1877F2; /* Azul de Facebook */
+}
+
+/* Estilos para Instagram */
+.instagram:hover svg {
+  fill: #C13584; /* Morado de Instagram */
+}
+
+/* Estilos para WhatsApp */
+.whatsapp:hover svg {
+  fill: #25D366; /* Verde de WhatsApp */
+}
+
+footer img {
+  width: 8%;
+  padding-left: 10px;
+  fill: rgb(212, 243, 235);
+  stroke: rgba(180, 47, 47, 0.43);
+}
+
 /** Estilos para los formularios */
 form {
   margin-top: 20px;
@@ -133,22 +157,27 @@ button {
 }
 
 button {
-  background-color: #333;
+  background-color: #0B2826;
   color: #fff;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: 0B2826;
 }
 
 /** Estilos de Seccion INICIO */
 
 #inicio {
-  margin: 10px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 10px;
+  padding: 3px;
+}
+
+#inicio p, h3 {
+  margin: 5px;
+  margin-top: 10px;
 }
 
 .tarjetaOfertas {
@@ -165,6 +194,7 @@ button:hover {
   width: 100%;
   border-radius: 3px;
   border: 1px solid #d4f3eb;
+  transition: transform 0.3s ease;
 }
 
 .tarjetaOfertas img:hover {
@@ -173,6 +203,7 @@ button:hover {
   box-shadow: 0px 10px 40px 0px rgba(180, 47, 47, 0.43);
   border-radius: 3px;
   border: 1px solid #0b2826;
+  transform: scale(1.1);
 }
 
 #buscador {
@@ -195,9 +226,9 @@ button:hover {
   grid-auto-flow: dense;
   grid-auto-rows: minmax(10rem, auto);
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
-
   margin: 10px;
 }
+
 .imagen_productos img {
   width: 100%;
   max-width: 100%;
