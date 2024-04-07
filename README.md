@@ -8,9 +8,18 @@ PetShop es un proyecto para una tienda virtual de productos para mascotas. Este 
 - Formulario de contacto para que los clientes se comuniquen con la tienda.
 
 # Tecnologías Utilizadas
+
 * HTML
 * CSS3
 * JavaScript
+* [Trello](https://trello.com/b/IsmsZJQY)
+* [Figma](https://www.figma.com/file/jOf4Ulvs9djb5bw7Rew1sg/UML-PetShop?type=whiteboard&node-id=0-1&t=MdLPax89qCqaJfmv-0)
+
+<p align="center">
+  <a href="">
+    <img src="https://skillicons.dev/icons?i=html,css,js,figma&perline=14" />
+  </a>
+</p>
 
 # Requisitos
 Para ejecutar este proyecto localmente, necesitarás:
