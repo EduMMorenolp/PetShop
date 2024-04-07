@@ -10,7 +10,7 @@ Fonts : https://fonts.google.com/selection/embed
 
 Iconos : https://fontawesome.com/
 
-Trello : https://trello.com/b/IsmsZJQY/proyecto-petshop
+Trello : https://trello.com/b/IsmsZJQY
 
 ------------------------------------------------------
 
