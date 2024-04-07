@@ -2,6 +2,16 @@
 
 PetShop es un proyecto para una tienda virtual de productos para mascotas. Este repositorio contiene los archivos necesarios para el desarrollo del sitio web, incluyendo HTML, CSS y JavaScript.
 
+## Contenido
+
+- [Descripción](#petshop)
+- [Características](#características)
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Requisitos](#requisitos)
+- [Contribución](#contribuciones)
+- [Autores](#autores)
+- [Licencia](#licencia)
+
 # Características
 - Página de inicio con información sobre la tienda.
 - Sección de productos con un carrusel de imágenes.
