@@ -72,7 +72,6 @@ main {
 }
 
 section {
-  background-color: #a9e6d8;
   width: 97%;
   height: 100%;
   margin: 0 auto;
@@ -87,12 +86,6 @@ section h2 {
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
-}
-
-section#productos .carrusel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #contacto {
@@ -198,6 +191,15 @@ h3 {
   margin-top: 10px;
 }
 
+#inicio h3 {
+  height: 40px;
+  overflow: hidden;
+}
+
+#productosOferta {
+  display: flex;
+  justify-content: space-between;
+}
 .tarjetaOfertas {
   display: inline-block;
   padding: 10px;
@@ -206,9 +208,9 @@ h3 {
 }
 
 .tarjetaOfertas img {
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
   width: 95%;
   border-radius: 3px;
   border: 1px solid #d4f3eb;
