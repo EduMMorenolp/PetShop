@@ -217,6 +217,84 @@ button:hover {
   box-sizing: border-box;
 }
 
+.productos_todos{
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: dense;
+  grid-auto-rows:minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+  
+  margin: 10px;
+}
+.imagen_productos img{
+  
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%
+}
+.imagen_productos{
+  
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+}
+
+
+.productos_todos{
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: dense;
+  grid-auto-rows:minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+  
+  margin: 10px;
+}
+.imagen_productos img{
+  
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%
+}
+.imagen_productos{
+  
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+}
+
+
+.productos_todos{
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: dense;
+  grid-auto-rows:minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
+  
+  margin: 10px;
+}
+.imagen_productos img{
+  
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%
+}
+.imagen_productos{
+  
+  display: flex;
+  justify-content: center;
+  
+  text-align: center;
+}
+
+
 .productos_todos {
   display: grid;
   gap: 1em;
