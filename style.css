@@ -198,9 +198,6 @@ button:hover {
 }
 
 .tarjetaOfertas img:hover {
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(209, 67, 67, 0.43);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(216, 45, 45, 0.43);
-  box-shadow: 0px 10px 40px 0px rgba(180, 47, 47, 0.43);
   border-radius: 3px;
   border: 1px solid #0b2826;
   transform: scale(1.1);
