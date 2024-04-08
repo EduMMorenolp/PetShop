@@ -1,0 +1,36 @@
+/* Estilos para el contenido principal */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilos para cada producto */
+.producto {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+/* Estilos para la imagen del producto */
+.producto img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Estilos para la descripción del producto */
+.descripcion {
+    text-align: center;
+}
+
+/* Estilos para el botón de eliminar */
+.eliminar {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+}

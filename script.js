@@ -1,8 +1,7 @@
 console.log("Bienvenido a PetShop Web")
 
-
+/** SCRIPT TEMPORAL DE AGREGADO */
 var botones = document.querySelectorAll(".addCarrito");
-
 botones.forEach(function (boton) {
     boton.addEventListener("click", function () {
         console.log("Boton presionado");
@@ -13,7 +12,16 @@ botones.forEach(function (boton) {
     })
 })
 
-
+/** SCRIPT TEMPORAL DE BORRADO */
+// Obtener todos los botones de eliminar
+var botonesEliminar = document.querySelectorAll('.eliminar');
+botonesEliminar.forEach(function(boton) {
+    boton.addEventListener('click', function() {
+        console.log('Botón eliminar presionado');
+        var producto = this.closest('.producto');
+        producto.remove();
+    });
+});
 
 
 
