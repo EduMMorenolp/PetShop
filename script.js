@@ -15,12 +15,26 @@ botones.forEach(function (boton) {
 /** SCRIPT TEMPORAL DE BORRADO */
 // Obtener todos los botones de eliminar
 var botonesEliminar = document.querySelectorAll('.eliminar');
-botonesEliminar.forEach(function(boton) {
-    boton.addEventListener('click', function() {
+botonesEliminar.forEach(function (boton) {
+    boton.addEventListener('click', function () {
         console.log('Botón eliminar presionado');
         var producto = this.closest('.producto');
         producto.remove();
     });
+});
+
+// BUSCADOR INICIO
+document.getElementById('botonBuscar').addEventListener('click', function () {
+    var resultados = document.getElementById('resultados');
+    var encontrados = false;
+
+    resultados.innerHTML = ''; // Limpiar resultados anteriores
+
+    if (!encontrados) {
+        resultado = document.createElement('div');
+        resultado.textContent = 'No se encontraron productos con ese nombre';
+        resultados.appendChild(resultado);
+    }
 });
 
 
@@ -146,20 +160,19 @@ botonesEliminar.forEach(function(boton) {
 
 
 
-    // MisterEgg
-    var secuenciaDeseada = ['ArrowUp', 'ArrowRight', 'ArrowRight', 'ArrowUp', 'ArrowLeft'];
-    var teclasPresionadas = [];
-    console.log("Para ver los integrantes Truquito de PC : '↑', '→', '→', '↑', '←' ")
-    function verificarSecuencia() {
-        console.log(teclasPresionadas);
-        if (teclasPresionadas.length === secuenciaDeseada.length) {
-            if (teclasPresionadas.every((tecla, indice) => tecla === secuenciaDeseada[indice])) {
-                window.location.href = 'integrantes.html';
-            }
-            teclasPresionadas = [];
+// MisterEgg
+var secuenciaDeseada = ['ArrowUp', 'ArrowRight', 'ArrowRight', 'ArrowUp', 'ArrowLeft'];
+var teclasPresionadas = [];
+console.log("Para ver los integrantes Truquito de PC : '↑', '→', '→', '↑', '←' ")
+function verificarSecuencia() {
+    if (teclasPresionadas.length === secuenciaDeseada.length) {
+        if (teclasPresionadas.every((tecla, indice) => tecla === secuenciaDeseada[indice])) {
+            window.location.href = 'integrantes.html';
         }
+        teclasPresionadas = [];
     }
-    document.addEventListener('keydown', function (event) {
-        teclasPresionadas.push(event.key);
-        verificarSecuencia();
-    });
+}
+document.addEventListener('keydown', function (event) {
+    teclasPresionadas.push(event.key);
+    verificarSecuencia();
+});
