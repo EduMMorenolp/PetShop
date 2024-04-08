@@ -191,14 +191,14 @@ button:hover {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  width: 100%;
+  width: 95%;
   border-radius: 3px;
   border: 1px solid #d4f3eb;
   transition: transform 0.3s ease;
 }
 
 .tarjetaOfertas img:hover {
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px solid #0b2826;
   transform: scale(1.1);
 }
