@@ -2,6 +2,7 @@
 body {
   font-family: "Comic Neue", cursive;
   background-color: #f2fbf9;
+  font-size: 1em;
 }
 
 .container {
@@ -10,9 +11,9 @@ body {
 
 /** Estilos para el header */
 header {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
   padding: 5px;
   display: flex;
   position: sticky;
@@ -22,16 +23,17 @@ header {
   align-items: center;
 }
 
-header h1 {
-  font-size: medium;
-  margin: 0;
-  padding-left: 20px;
+header img {
+  width: 70px;
+  padding-left: 10px;
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center; 
 }
 
 nav ul li {
@@ -40,9 +42,28 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 14px;
-  color: #1d4440;
+  font-size: 1em;
+  color: #f2fbf9;
   text-decoration: none;
+}
+
+nav ul li a img {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.carrito-icon {
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  background-color: #f2fbf9; 
+  color: #1d4440; 
+  border-radius: 30%; 
+  padding:  8px; 
+  margin-left: 5px; 
 }
 
 /** Estilos para el main */
@@ -59,6 +80,10 @@ section {
 }
 
 section h2 {
+  background-color: #20655d;
+  color: #f2fbf9;
+  border-radius: 5px;
+  padding: 5px;
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
@@ -76,10 +101,10 @@ section#productos .carrusel {
 
 /** Estilos para el footer */
 footer {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
-  padding: 10px;
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
+  padding: 4px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -103,7 +128,27 @@ footer ul li {
 footer ul li svg {
   width: 24px;
   height: 24px;
-  fill: #1d4440;
+  fill: #f2fbf9;
+}
+
+/* Estilos para Facebook */
+.facebook:hover svg {
+  fill: #1877f2; /* Azul de Facebook */
+}
+
+/* Estilos para Instagram */
+.instagram:hover svg {
+  fill: #c13584; /* Morado de Instagram */
+}
+
+/* Estilos para WhatsApp */
+.whatsapp:hover svg {
+  fill: #25d366; /* Verde de WhatsApp */
+}
+
+footer img {
+  width: 70px;
+  padding-left: 10px;
 }
 
 /** Estilos para los formularios */
@@ -129,23 +174,28 @@ button {
 }
 
 button {
-  background-color: #333;
+  background-color: #0b2826;
   color: #fff;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: 0B2826;
 }
-
 
 /** Estilos de Seccion INICIO */
 
 #inicio {
-  margin: 10px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: 2fr 1fr;
-  padding: 10px;
+  padding: 3px;
+}
+
+#inicio p,
+h3 {
+  margin: 5px;
+  margin-top: 10px;
 }
 
 .tarjetaOfertas {
@@ -156,21 +206,28 @@ button:hover {
 }
 
 .tarjetaOfertas img {
-  width: 100%;
+  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  width: 95%;
   border-radius: 3px;
-  border: 1px solid #D4F3EB;
+  border: 1px solid #d4f3eb;
+  transition: transform 0.3s ease;
 }
 
 .tarjetaOfertas img:hover {
-  -ms-zoom: normal;
-  border-radius: 3px;
-  border: 1px solid #0B2826;
+  border-radius: 10px;
+  border: 1px solid #0b2826;
+  transform: scale(1.1);
 }
 
 #buscador {
-  align-content: center;
-  padding: 5px;
+  padding-left: 5px;
   border-radius: 10px;
+}
+
+#resultados {
+  text-align: center;
 }
 
 #buscador input[type="text"] {
@@ -181,3 +238,27 @@ button:hover {
   box-sizing: border-box;
 }
 
+/** Estilos de Seccion PRODUCTOS */
+
+.productos_todos {
+  display: grid;
+  gap: 1em;
+  grid-auto-flow: dense;
+  grid-auto-rows: minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  margin: 10px;
+}
+
+.imagen_productos img {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%;
+}
+
+.imagen_productos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
-    <title>PetShop</title>
+    <link rel="stylesheet" href="carrito.css">
 
-    <!-- Font Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+    
 </head>
-
 <body>
-
     <header>
         <img src="./img/extra/petshop.svg" alt="logo">
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#productos">Productos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="./index.html#inicio">Inicio</a></li>
+                <li><a href="./index.html#productos">Productos</a></li>
+                <li><a href="./index.html#contacto">Contacto</a></li>
+                <li><a href="./index.html#servicios">Servicios</a></li>
                 <li><a href="./carrito.html" class="carrito-icon">
                         <img src="/img/extra/carrito.svg" alt="Carrito de compra">
                         <span class="contador">0</span>
@@ -33,90 +26,24 @@
             </ul>
         </nav>
     </header>
-
     <main>
-        <section id="inicio">
-            <div id="ofertas">
-                <h2>Ofertas</h2>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert1.webp" alt="Producto">
-                    <h3>GATI PESCADO Y SALMON</h3>
-                    <p>10% OFF</p>
-                    <p><strong>$10</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
-                </div>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert2.webp" alt="Producto">
-                    <h3>EXCELLENT PUPPY</h3>
-                    <p>30% OFF</p>
-                    <p><strong>$15</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
-                </div>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert3.webp" alt="Producto">
-                    <h3>PRO PLAN PUPPY MEDIANO</h3>
-                    <p>15% OFF</p>
-                    <p><strong>$20</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
-                </div>
+        <div class="producto">
+            <img src="./img/productos/Ofert2.webp" alt="Producto 1">
+            <div class="descripcion">
+                <h2>EXCELLENT PUPPY</h2>
+                <p>Precio: $15</p>
+                <button class="eliminar">Eliminar</button>
             </div>
-            <div id="buscador">
-                <h2> Buscador de Productos</h2>
-                <input type="text" id="inputBusqueda">
-                <button id="botonBuscar">Buscar</button>
-                <div id="resultados">
-                    <!-- Aquí se mostrarán los resultados de la búsqueda -->
-                </div>
+        </div>
+        <div class="producto">
+            <img src="./img/productos/Ofert1.webp" alt="Producto 2">
+            <div class="descripcion">
+                <h2>GATI PESCADO Y SALMON</h2>
+                <p>Precio: $10</p>
+                <button class="eliminar">Eliminar</button>
             </div>
-        </section>
-
-        <section id="productos">
-            <h2>Productos</h2>
-            <div class="productos_todos">
-                <div class="imagen_productos">
-                    <img src="img/productos/1.webp" alt="Producto 1">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/2.webp" alt="Producto 2">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/3.webp" alt="Producto 3">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/4.webp" alt="Producto 4">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/5.webp" alt="Producto 5">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/6.webp" alt="Producto 6">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/7.webp" alt="Producto 7">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/8.webp" alt="Producto 8">
-                </div>
-
-            </div>
-        </section>
-
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-                <!-- Agrega aquí más campos de formulario -->
-                <button type="submit">Enviar</button>
-            </form>
-        </section>
-
-        <section id="servicios">
-            <h2>Servicios</h2>
-        </section>
-
+        </div>
     </main>
-
     <footer>
         <div id="formasDePago">
             <h5>Formas de Pago</h5>
@@ -172,7 +99,6 @@
             </ul>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
 </body>
-
 </html>
