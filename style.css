@@ -114,17 +114,17 @@ footer ul li svg {
 
 /* Estilos para Facebook */
 .facebook:hover svg {
-  fill: #1877F2; /* Azul de Facebook */
+  fill: #1877f2; /* Azul de Facebook */
 }
 
 /* Estilos para Instagram */
 .instagram:hover svg {
-  fill: #C13584; /* Morado de Instagram */
+  fill: #c13584; /* Morado de Instagram */
 }
 
 /* Estilos para WhatsApp */
 .whatsapp:hover svg {
-  fill: #25D366; /* Verde de WhatsApp */
+  fill: #25d366; /* Verde de WhatsApp */
 }
 
 footer img {
@@ -157,7 +157,7 @@ button {
 }
 
 button {
-  background-color: #0B2826;
+  background-color: #0b2826;
   color: #fff;
   cursor: pointer;
 }
@@ -175,7 +175,8 @@ button:hover {
   padding: 3px;
 }
 
-#inicio p, h3 {
+#inicio p,
+h3 {
   margin: 5px;
   margin-top: 10px;
 }
@@ -217,27 +218,25 @@ button:hover {
   box-sizing: border-box;
 }
 
-.productos_todos{
+.productos_todos {
   display: grid;
   gap: 1em;
   grid-auto-flow: dense;
-  grid-auto-rows:minmax(10rem, auto);
-  grid-template-columns: repeat(auto-fill,minmax(10rem,1fr));
-  
+  grid-auto-rows: minmax(10rem, auto);
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
   margin: 10px;
 }
-.imagen_productos img{
-  
+
+.imagen_productos img {
   width: 100%;
   max-width: 100%;
   padding: 10px;
   height: auto;
-  border-radius: 10%
+  border-radius: 10%;
 }
-.imagen_productos{
-  
+
+.imagen_productos {
   display: flex;
   justify-content: center;
-  
   text-align: center;
 }
