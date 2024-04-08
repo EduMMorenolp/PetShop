@@ -3,20 +3,31 @@ console.log("Bienvenido a PetShop Web")
 // Navbar
 document.addEventListener("DOMContentLoaded", function () {
     var links = document.querySelectorAll("nav a");
+    var navbar = document.querySelector("nav");
 
     links.forEach(function (link) {
         link.addEventListener("click", function (event) {
-            event.preventDefault();
             var targetId = link.getAttribute("href");
-            var targetElement = document.querySelector(targetId);
-            var offset = targetElement.offsetTop - 90;
-            window.scrollTo({
-                top: offset,
-                behavior: "smooth"
-            });
+            var targetElement;
+            if (targetId.startsWith("#")) {
+                event.preventDefault(); // Evitar que se ejecute la acción predeterminada del enlace
+                targetElement = document.getElementById(targetId.substring(1));
+            } else {
+                // Si el href no comienza con '#', abre el enlace normalmente
+                return;
+            }
+            if (targetElement) {
+                var navbarHeight = navbar.offsetHeight; // Obtener la altura del navbar
+                var offset = targetElement.offsetTop - navbarHeight;
+                window.scrollTo({
+                    top: offset,
+                    behavior: "smooth"
+                });
+            }
         });
     });
 });
+
 
 /** SCRIPT TEMPORAL DE AGREGADO */
 var botones = document.querySelectorAll(".addCarrito");
