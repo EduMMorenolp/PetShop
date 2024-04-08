@@ -33,6 +33,7 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
     if (!encontrados) {
         resultado = document.createElement('div');
         resultado.textContent = 'No se encontraron productos con ese nombre';
+        resultado.style.color = 'red';
         resultados.appendChild(resultado);
     }
 });

@@ -226,6 +226,10 @@ h3 {
   border-radius: 10px;
 }
 
+#resultados {
+  text-align: center;
+}
+
 #buscador input[type="text"] {
   width: 100%;
   padding: 10px;
@@ -233,6 +237,8 @@ h3 {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
+/** Estilos de Seccion PRODUCTOS */
 
 .productos_todos {
   display: grid;
