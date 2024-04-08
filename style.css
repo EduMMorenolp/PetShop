@@ -26,14 +26,14 @@ header {
 header img {
   width: 10%;
   padding-left: 10px;
-  fill: rgb(212, 243, 235);
-  stroke: rgba(180, 47, 47, 0.43);
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center; 
 }
 
 nav ul li {
@@ -45,6 +45,25 @@ nav ul li a {
   font-size: 1em;
   color: #f2fbf9;
   text-decoration: none;
+}
+
+nav ul li a img {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.carrito-icon {
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  background-color: #f2fbf9; 
+  color: #1d4440; 
+  border-radius: 30%; 
+  padding:  8px; 
+  margin-left: 5px; 
 }
 
 /** Estilos para el main */
