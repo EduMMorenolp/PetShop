@@ -264,3 +264,17 @@ h3 {
   justify-content: center;
   text-align: center;
 }
+
+/* Pantalla grande (escritorio): */
+@media all and (min-width: 1024px) {
+ 
+}
+/* Pantalla mediana (tabletas): */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+
+}
+/* Pantalla pequeña (teléfonos): */
+@media all and (max-width: 767px) {
+
+}
+
