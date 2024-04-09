@@ -265,6 +265,8 @@ h3 {
   text-align: center;
 }
 
+/** Estilos de media query */
+
 /* Pantalla grande (escritorio): */
 @media all and (min-width: 1024px) {
  
