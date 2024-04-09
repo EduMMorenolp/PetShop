@@ -47,6 +47,7 @@ nav ul li a {
 /** Estilos para el main */
 main {
   padding: 0 0 15px 0;
+  
 }
 
 section {
@@ -70,9 +71,74 @@ section#productos .carrusel {
   align-items: center;
 }
 
-#contacto {
-    width: 85%;
+/**  +++++++++++++++++++++++++++++++++++++++COMIENZO Seccion contactos  */
+
+#contacto{
+  height: auto;
+  margin-top: 10px;
 }
+
+.container_contacto{
+  display: flex;
+  justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.container_redes_ubicacion{
+}
+.container_redes_ubicacion ul{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  
+}
+.container_redes_ubicacion ul li  {
+  display: inline-block;
+  padding: 20px;
+  margin-right: 5px;
+}
+.container_redes_ubicacion ul li svg {
+  width: 40px;
+  height: 40px;
+  fill: #1d4440;
+}
+.container_formulario{
+  
+}
+
+
+/** Estilos para los formularios */
+form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}
+/**  +++++++++++++++++++++++++++++++++++++++FIN  Seccion contactos  */
 
 /** Estilos para el footer */
 footer {
@@ -106,34 +172,4 @@ footer ul li svg {
   fill: #1d4440;
 }
 
-/** Estilos para los formularios */
-form {
-  margin-top: 20px;
-}
 
-label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  background-color: #333;
-  color: #fff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #555;
-}
