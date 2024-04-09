@@ -24,16 +24,16 @@ header {
 }
 
 header img {
-  width: 10%;
+  width: 70px;
   padding-left: 10px;
-  fill: rgb(212, 243, 235);
-  stroke: rgba(180, 47, 47, 0.43);
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  align-items: center; 
 }
 
 nav ul li {
@@ -45,6 +45,25 @@ nav ul li a {
   font-size: 1em;
   color: #f2fbf9;
   text-decoration: none;
+}
+
+nav ul li a img {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.carrito-icon {
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  background-color: #f2fbf9; 
+  color: #1d4440; 
+  border-radius: 30%; 
+  padding:  8px; 
+  margin-left: 5px; 
 }
 
 /** Estilos para el main */
@@ -114,24 +133,22 @@ footer ul li svg {
 
 /* Estilos para Facebook */
 .facebook:hover svg {
-  fill: #1877F2; /* Azul de Facebook */
+  fill: #1877f2; /* Azul de Facebook */
 }
 
 /* Estilos para Instagram */
 .instagram:hover svg {
-  fill: #C13584; /* Morado de Instagram */
+  fill: #c13584; /* Morado de Instagram */
 }
 
 /* Estilos para WhatsApp */
 .whatsapp:hover svg {
-  fill: #25D366; /* Verde de WhatsApp */
+  fill: #25d366; /* Verde de WhatsApp */
 }
 
 footer img {
-  width: 8%;
+  width: 70px;
   padding-left: 10px;
-  fill: rgb(212, 243, 235);
-  stroke: rgba(180, 47, 47, 0.43);
 }
 
 /** Estilos para los formularios */
@@ -157,7 +174,7 @@ button {
 }
 
 button {
-  background-color: #0B2826;
+  background-color: #0b2826;
   color: #fff;
   cursor: pointer;
 }
@@ -175,7 +192,8 @@ button:hover {
   padding: 3px;
 }
 
-#inicio p, h3 {
+#inicio p,
+h3 {
   margin: 5px;
   margin-top: 10px;
 }
@@ -191,22 +209,25 @@ button:hover {
   -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
   -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
   box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  width: 100%;
+  width: 95%;
   border-radius: 3px;
   border: 1px solid #d4f3eb;
   transition: transform 0.3s ease;
 }
 
 .tarjetaOfertas img:hover {
-  border-radius: 3px;
+  border-radius: 10px;
   border: 1px solid #0b2826;
   transform: scale(1.1);
 }
 
 #buscador {
-  align-content: center;
-  padding: 5px;
+  padding-left: 5px;
   border-radius: 10px;
+}
+
+#resultados {
+  text-align: center;
 }
 
 #buscador input[type="text"] {
@@ -216,6 +237,8 @@ button:hover {
   border-radius: 5px;
   box-sizing: border-box;
 }
+
+/** Estilos de Seccion PRODUCTOS */
 
 .productos_todos {
   display: grid;
@@ -233,9 +256,9 @@ button:hover {
   height: auto;
   border-radius: 10%;
 }
+
 .imagen_productos {
   display: flex;
   justify-content: center;
-
   text-align: center;
 }
