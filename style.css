@@ -2,6 +2,7 @@
 body {
   font-family: "Comic Neue", cursive;
   background-color: #f2fbf9;
+  font-size: 1em;
 }
 
 .container {
@@ -10,21 +11,23 @@ body {
 
 /** Estilos para el header */
 header {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
   padding: 5px;
   display: flex;
   position: sticky;
   top: 5px;
+  z-index: 1000;
   justify-content: space-between;
   align-items: center;
 }
 
-header h1 {
-  font-size: medium;
-  margin: 0;
-  padding-left: 20px;
+header img {
+  width: 10%;
+  padding-left: 10px;
+  fill: rgb(212, 243, 235);
+  stroke: rgba(180, 47, 47, 0.43);
 }
 
 nav ul {
@@ -39,8 +42,8 @@ nav ul li {
 }
 
 nav ul li a {
-  font-size: 14px;
-  color: #1d4440;
+  font-size: 1em;
+  color: #f2fbf9;
   text-decoration: none;
 }
 
@@ -50,15 +53,18 @@ main {
 }
 
 section {
-  margin-bottom: 40px;
   background-color: #a9e6d8;
   width: 97%;
-  height: 300px;
+  height: 100%;
   margin: 0 auto;
   border-radius: 10px;
 }
 
 section h2 {
+  background-color: #20655d;
+  color: #f2fbf9;
+  border-radius: 5px;
+  padding: 5px;
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
@@ -129,11 +135,11 @@ button {
 }
 
 button {
-  background-color: #333;
+  background-color: #0B2826;
   color: #fff;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #555;
+  background-color: 0B2826;
 }
