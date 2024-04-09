@@ -81,20 +81,21 @@ section#productos .carrusel {
 .container_contacto{
   display: flex;
   justify-content: space-around;
-  margin-left: 10px;
-  margin-right: 10px;
+  align-items: center;
 }
-.container_redes_ubicacion{
-}
-.container_redes_ubicacion ul{
-  display: flex;
-  justify-content: center;
+
+footer ul {
   list-style-type: none;
-  
+  margin: 0;
+  padding: 0;
 }
-.container_redes_ubicacion ul li  {
-  display: inline-block;
-  padding: 20px;
+
+footer h5 {
+  margin: 0;
+}
+
+footer ul li {
+  display: inline;
   margin-right: 5px;
 }
 .container_redes_ubicacion ul li svg {
@@ -102,10 +103,26 @@ section#productos .carrusel {
   height: 40px;
   fill: #1d4440;
 }
-.container_formulario{
-  
+
+/* Estilos para Facebook */
+.facebook:hover svg {
+  fill: #1877f2; /* Azul de Facebook */
 }
 
+/* Estilos para Instagram */
+.instagram:hover svg {
+  fill: #c13584; /* Morado de Instagram */
+}
+
+/* Estilos para WhatsApp */
+.whatsapp:hover svg {
+  fill: #25d366; /* Verde de WhatsApp */
+}
+
+footer img {
+  width: 70px;
+  padding-left: 10px;
+}
 
 /** Estilos para los formularios */
 form {
@@ -166,10 +183,16 @@ footer ul li {
   margin-right: 5px;
 }
 
-footer ul li svg {
-  width: 24px;
-  height: 24px;
-  fill: #1d4440;
+.imagen_productos img {
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  height: auto;
+  border-radius: 10%;
 }
 
-
+.imagen_productos {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
