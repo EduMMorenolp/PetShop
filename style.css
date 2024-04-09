@@ -47,7 +47,6 @@ nav ul li a {
 /** Estilos para el main */
 main {
   padding: 0 0 15px 0;
-  
 }
 
 section {
@@ -71,14 +70,16 @@ section#productos .carrusel {
   align-items: center;
 }
 
-/**  +++++++++++++++++++++++++++++++++++++++COMIENZO Seccion contactos  */
-
-#contacto{
-  height: auto;
-  margin-top: 10px;
+#contacto {
+    width: 85%;
 }
 
-.container_contacto{
+/** Estilos para el footer */
+footer {
+  background-color: #a9e6d8;
+  color: #1d4440;
+  border-radius: 30px;
+  padding: 10px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -98,30 +99,11 @@ footer ul li {
   display: inline;
   margin-right: 5px;
 }
-.container_redes_ubicacion ul li svg {
-  width: 40px;
-  height: 40px;
+
+footer ul li svg {
+  width: 24px;
+  height: 24px;
   fill: #1d4440;
-}
-
-/* Estilos para Facebook */
-.facebook:hover svg {
-  fill: #1877f2; /* Azul de Facebook */
-}
-
-/* Estilos para Instagram */
-.instagram:hover svg {
-  fill: #c13584; /* Morado de Instagram */
-}
-
-/* Estilos para WhatsApp */
-.whatsapp:hover svg {
-  fill: #25d366; /* Verde de WhatsApp */
-}
-
-footer img {
-  width: 70px;
-  padding-left: 10px;
 }
 
 /** Estilos para los formularios */
@@ -154,45 +136,4 @@ button {
 
 button:hover {
   background-color: #555;
-}
-/**  +++++++++++++++++++++++++++++++++++++++FIN  Seccion contactos  */
-
-/** Estilos para el footer */
-footer {
-  background-color: #a9e6d8;
-  color: #1d4440;
-  border-radius: 30px;
-  padding: 10px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-footer ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-footer h5 {
-  margin: 0;
-}
-
-footer ul li {
-  display: inline;
-  margin-right: 5px;
-}
-
-.imagen_productos img {
-  width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  height: auto;
-  border-radius: 10%;
-}
-
-.imagen_productos {
-  display: flex;
-  justify-content: center;
-  text-align: center;
 }
