@@ -3,6 +3,7 @@ body {
   font-family: "Comic Neue", cursive;
   background-color: #f2fbf9;
   font-size: 1em;
+  cursor: url("./img/extra/cursor.svg"), auto;
 }
 
 .container {
