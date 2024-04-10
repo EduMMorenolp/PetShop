@@ -33,7 +33,7 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center; 
+  align-items: center;
 }
 
 nav ul li {
@@ -59,11 +59,11 @@ nav ul li a img {
 }
 
 .contador {
-  background-color: #f2fbf9; 
-  color: #1d4440; 
-  border-radius: 30%; 
-  padding:  8px; 
-  margin-left: 5px; 
+  background-color: #f2fbf9;
+  color: #1d4440;
+  border-radius: 30%;
+  padding: 8px;
+  margin-left: 5px;
 }
 
 /** Estilos para el main */
@@ -269,14 +269,27 @@ h3 {
 
 /* Pantalla grande (escritorio): */
 @media all and (min-width: 1024px) {
- 
 }
 /* Pantalla mediana (tabletas): */
 @media all and (min-width: 768px) and (max-width: 1023px) {
-
 }
 /* Pantalla pequeña (teléfonos): */
 @media all and (max-width: 767px) {
-
 }
 
+/** Estilos de media query INICIO */
+
+@media all and (max-width: 767px) {
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #buscador {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+  }
+}
