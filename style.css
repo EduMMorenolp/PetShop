@@ -35,6 +35,7 @@ nav ul {
   padding: 0;
   display: flex;
   align-items: center;
+ 
 }
 
 nav ul li {
@@ -46,6 +47,11 @@ nav ul li a {
   font-size: 1em;
   color: #f2fbf9;
   text-decoration: none;
+  cursor: url("./img/extra/cursor2.svg"), auto;
+}
+
+nav ul li a:hover {
+  color: yellowgreen;
 }
 
 nav ul li a img {
@@ -153,6 +159,7 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
+  cursor: url("./img/extra/cursor.svg"), auto !important;
 }
 
 input[type="text"],
@@ -165,6 +172,7 @@ button {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  cursor: url("./img/extra/cursor2.svg"), auto !important;
 }
 
 button {
