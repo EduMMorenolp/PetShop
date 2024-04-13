@@ -3,6 +3,7 @@ body {
   font-family: "Comic Neue", cursive;
   background-color: #f2fbf9;
   font-size: 1em;
+  cursor: url("./img/extra/cursor.svg"), auto;
 }
 
 .container {
@@ -33,7 +34,8 @@ nav ul {
   margin: 0;
   padding: 0;
   display: flex;
-  align-items: center; 
+  align-items: center;
+ 
 }
 
 nav ul li {
@@ -45,6 +47,11 @@ nav ul li a {
   font-size: 1em;
   color: #f2fbf9;
   text-decoration: none;
+  cursor: url("./img/extra/cursor2.svg"), auto;
+}
+
+nav ul li a:hover {
+  color: yellowgreen;
 }
 
 nav ul li a img {
@@ -59,11 +66,11 @@ nav ul li a img {
 }
 
 .contador {
-  background-color: #f2fbf9; 
-  color: #1d4440; 
-  border-radius: 30%; 
-  padding:  8px; 
-  margin-left: 5px; 
+  background-color: #f2fbf9;
+  color: #1d4440;
+  border-radius: 30%;
+  padding: 8px;
+  margin-left: 5px;
 }
 
 /** Estilos para el main */
@@ -72,7 +79,6 @@ main {
 }
 
 section {
-  background-color: #a9e6d8;
   width: 97%;
   height: 100%;
   margin: 0 auto;
@@ -87,12 +93,6 @@ section h2 {
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
-}
-
-section#productos .carrusel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 
 #contacto {
@@ -159,6 +159,7 @@ form {
 label {
   display: block;
   margin-bottom: 5px;
+  cursor: url("./img/extra/cursor.svg"), auto !important;
 }
 
 input[type="text"],
@@ -171,6 +172,7 @@ button {
   margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  cursor: url("./img/extra/cursor2.svg"), auto !important;
 }
 
 button {
@@ -198,6 +200,15 @@ h3 {
   margin-top: 10px;
 }
 
+#inicio h3 {
+  height: 40px;
+  overflow: hidden;
+}
+
+#productosOferta {
+  display: flex;
+  justify-content: space-between;
+}
 .tarjetaOfertas {
   display: inline-block;
   padding: 10px;
@@ -206,11 +217,11 @@ h3 {
 }
 
 .tarjetaOfertas img {
-  -webkit-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  -moz-box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
-  box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.43);
+  -webkit-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
+  -moz-box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
+  box-shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.43);
   width: 95%;
-  border-radius: 3px;
+  border-radius: 5px;
   border: 1px solid #d4f3eb;
   transition: transform 0.3s ease;
 }
@@ -239,26 +250,112 @@ h3 {
 }
 
 /** Estilos de Seccion PRODUCTOS */
+.producto img {
+  width: 100%;
+  height: auto;
+}
 
-.productos_todos {
+.productos{
   display: grid;
-  gap: 1em;
+  grid-auto-flow: dense;
+  display: grid;
   grid-auto-flow: dense;
   grid-auto-rows: minmax(10rem, auto);
   grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  gap: 1em;
   margin: 10px;
 }
+.producto{
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(26,68,64,0.3);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(26,68,64,0.3);
+  box-shadow: 0px 0px 6px 1px rgba(26,68,64,0.3);
 
-.imagen_productos img {
-  width: 100%;
-  max-width: 100%;
-  padding: 10px;
-  height: auto;
-  border-radius: 10%;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 15px;
+}
+.producto:hover{
+  transform: scale(1.05);
+  position: relative;
+  -webkit-box-shadow: 0px 0px 6px 1px rgba(26,68,64,1);
+  -moz-box-shadow: 0px 0px 6px 1px rgba(26,68,64,1);
+  box-shadow: 0px 0px 6px 1px rgba(26,68,64,1);
+}
+.oferta p{
+  margin: auto;
+  padding: 0;
+  background-color: rgb(230, 245, 20);
 }
 
-.imagen_productos {
+/** Estilos de media query */
+
+/* Pantalla grande (escritorio): */
+@media all and (min-width: 1024px) {
+}
+/* Pantalla mediana (tabletas): */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+}
+/* Pantalla pequeña (teléfonos): */
+@media all and (max-width: 767px) {
+}
+
+/** Estilos de media query INICIO */
+
+@media all and (max-width: 767px) {
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  #buscador {
+    display: inline-block;
+    width: 70%;
+    padding: 10px;
+  }
+}
+
+/**Estilo seccion servicios */
+.grilla {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 14px;
+  padding: 20px;
+}
+
+.grilla div img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.tipoServicio{
   display: flex;
   justify-content: center;
   text-align: center;
+  position: relative;
+}
+
+.textoServicio{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.tipoServicio:hover *{
+  transform: translateY(8px);
+  opacity: 1;
 }

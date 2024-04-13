@@ -19,7 +19,7 @@
 <body>
  
     <header>
-        <img src="./img/extra/petshop.svg" alt="logo">
+        <a href="/"><img src="./img/extra/petshop.svg" alt="logo"></a>
         <nav>
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
@@ -38,26 +38,28 @@
         <section id="inicio">
             <div id="ofertas">
                 <h2>Ofertas</h2>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert1.webp" alt="Producto">
-                    <h3>GATI PESCADO Y SALMON</h3>
-                    <p>10% OFF</p>
-                    <p><strong>$10</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
-                </div>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert2.webp" alt="Producto">
-                    <h3>EXCELLENT PUPPY</h3>
-                    <p>30% OFF</p>
-                    <p><strong>$15</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
-                </div>
-                <div class="tarjetaOfertas">
-                    <img src="./img/productos/Ofert3.webp" alt="Producto">
-                    <h3>PRO PLAN PUPPY MEDIANO</h3>
-                    <p>15% OFF</p>
-                    <p><strong>$20</strong></p>
-                    <button class="addCarrito">Agregar al Carrito</button>
+                <div id="productosOferta">
+                    <div class="tarjetaOfertas producto">
+                        <img src="./img/productos/Ofert1.webp" alt="Producto">
+                        <h3>GATI PESCADO Y SALMON</h3>
+                        <p>10% OFF</p>
+                        <p><strong>$10</strong></p>
+                        <button class="addCarrito">Agregar al Carrito</button>
+                    </div>
+                    <div class="tarjetaOfertas producto">
+                        <img src="./img/productos/Ofert2.webp" alt="Producto">
+                        <h3>EXCELLENT PUPPY</h3>
+                        <p>30% OFF</p>
+                        <p><strong>$15</strong></p>
+                        <button class="addCarrito">Agregar al Carrito</button>
+                    </div>
+                    <div class="tarjetaOfertas producto">
+                        <img src="./img/productos/Ofert3.webp" alt="Producto">
+                        <h3>PRO PLAN PUPPY MEDIANO</h3>
+                        <p>15% OFF</p>
+                        <p><strong>$20</strong></p>
+                        <button class="addCarrito">Agregar al Carrito</button>
+                    </div>
                 </div>
             </div>
             <div id="buscador">
@@ -72,32 +74,135 @@
 
         <section id="productos">
             <h2>Productos</h2>
-            <div class="productos_todos">
-                <div class="imagen_productos">
-                    <img src="img/productos/1.webp" alt="Producto 1">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/2.webp" alt="Producto 2">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/3.webp" alt="Producto 3">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/4.webp" alt="Producto 4">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/5.webp" alt="Producto 5">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/6.webp" alt="Producto 6">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/7.webp" alt="Producto 7">
-                </div>
-                <div class="imagen_productos">
-                    <img src="img/productos/8.webp" alt="Producto 8">
-                </div>
+            <div class="productos">
+                <div class="producto">
 
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>2kg Gratis</p>
+                        </div>
+                        <img src="img/productos/1.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Sieger</h3>
+
+                        <p><strong>$150</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>3kg Gratis</p>
+                        </div>
+                        <img src="img/productos/2.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Cat Chow</h3>
+
+                        <p><strong>$180</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>2kg Gratis</p>
+                        </div>
+                        <img src="img/productos/3.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Complete</h3>
+
+                        <p><strong>$118</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+                    <div class="oferta">
+                        <p>2kg Gratis</p>
+                    </div>
+                    <div class="img_producto">
+                        <img src="img/productos/4.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Balanced</h3>
+
+                        <p><strong>$141</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>2kg Gratis</p>
+                        </div>
+                        <img src="img/productos/5.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Dog Selection</h3>
+
+                        <p><strong>$114</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>20% Gratis</p>
+                        </div>
+                        <img src="img/productos/6.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Eukanuba</h3>
+
+                        <p><strong>$135</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>3kg Gratis</p>
+                        </div>
+                        <img src="img/productos/7.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Ken-l</h3>
+
+                        <p><strong>$167</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                <div class="producto">
+
+                    <div class="img_producto">
+                        <div class="oferta">
+                            <p>2kg Gratis</p>
+                        </div>
+                        <img src="img/productos/8.webp" alt="Producto 1">
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>Premium</h3>
+
+                        <p><strong>$147</strong></p>
+                        <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -113,6 +218,32 @@
 
         <section id="servicios">
             <h2>Servicios</h2>
+            <div class="grilla">
+                <div class="tipoServicio">
+                    <img src="./img/servicios/veterinaria.png" alt="veterinaria">
+                    <div class="textoServicio">
+                        <p>Donde la salud y el bienestar de tu mascota son nuestra principal prioridad. Nuestro equipo de médicos veterinarios altamente calificados está dedicado a brindar la mejor atención médica y cuidado compasivo para tus amigos peludos.</p>
+                    </div>                    
+                </div>
+                <div class="tipoServicio">
+                    <img src="./img/servicios/peluqueria.png" alt="peluqueria">
+                    <div class="textoServicio">
+                        <p>Nuestros expertos estilistas no solo se preocupan por la apariencia de tu mascota, sino también por su comodidad y seguridad durante todo el proceso. </p>
+                    </div>
+                </div>
+                <div class="tipoServicio">
+                    <img src="./img/servicios/adopcion.png" alt="adopcion">
+                    <div class="textoServicio">
+                        <p>Nuestro servicio de adopción de mascotas ofrece una oportunidad única para encontrar a tu compañero peludo perfecto y darle un hogar para siempre.</p>
+                    </div>
+                </div>
+                <div class="tipoServicio">
+                    <img src="./img/servicios/microchip.png" alt="microchip">
+                    <div class="textoServicio">
+                        <p>Entendemos lo importante que es la seguridad y el bienestar de tus mascotas. Es por eso que ofrecemos el servicio de implantación de microchips, una herramienta invaluable para ayudar a proteger a tus compañeros peludos en caso de extravío o robo.</p>
+                    </div>
+                </div>     
+            </div>
         </section>
 
     </main>
@@ -144,7 +275,7 @@
             </ul>
         </div>
 
-        <img src="./img/extra/petshop.svg" alt="logo">
+        <a href="/"><img src="./img/extra/petshop.svg" alt="logo"></a>
 
         <div id="redes">
             <ul>
