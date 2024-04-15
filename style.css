@@ -312,7 +312,12 @@ h3 {
     text-align: center;
   }
 
+  #ofertas{
+    order: 2;
+  }
+
   #buscador {
+    order: 1;
     display: inline-block;
     width: 70%;
     padding: 10px;
