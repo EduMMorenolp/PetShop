@@ -123,12 +123,14 @@ footer h5 {
 footer ul li {
   display: inline;
   margin-right: 5px;
+  cursor: url("./img/extra/cursor.svg"), auto !important;
 }
 
 footer ul li svg {
   width: 24px;
   height: 24px;
   fill: #f2fbf9;
+  cursor: url("./img/extra/cursor.svg"), auto !important;
 }
 
 /* Estilos para Facebook */
