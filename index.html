@@ -216,7 +216,7 @@
                 <div class="row">
                     <div class="col">
                         <div class="row">
-                            <h2 class="mt-4">Redes</h2>
+                            <h2>Redes</h2>
                             <ul class="list-unstyled d-flex justify-content-center mt-3 mb-4">
                                 <a href="https://api.whatsapp.com/" target="_blank">
                                     <li class="me-3">
@@ -252,9 +252,9 @@
 
                         <div class="row">
                             <h2>Ubicación</h2>
-                            <iframe
+                            <iframe 
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d205.25096135828693!2d-58.38146176978523!3d-34.60377255138139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1713385658636!5m2!1ses!2sar"
-                                width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                                width="400" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                                 referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
 
@@ -296,9 +296,18 @@
                                 <input type="radio" class="form-check-input" name="consulta" id="bañoCorteRadio">
                                 <label for="bañoCorteRadio" form-check-label>Baño y/o Corte</label>
                             </div>
-                            <div class="col-6input-group">
+                            <div class="col-4 mb-4">
+                                <label for="mascotaSelect">Elija su mascota:</label>
+                                <select class="form-select" id="mascotaSelect" aria-label="Mascota">
+                                    <option selected>Mascota</option>
+                                    <option value="1">🐶Perro</option>
+                                    <option value="2">🐱Gato</option>
+                                    <option value="3">🐖Otro</option>
+                                  </select>
+                            </div>
+                            <div class="col-6 input-group">
                                 <label for="consultaInput">Consulta:</label>
-                                <textarea class="form-control-l" id="consultaInput" name="textoConsulta" aria-label="With textarea" placeholder="Escriba su consulta aquí"></textarea>
+                                <textarea class="form-control-l" rows="4" id="consultaInput" name="textoConsulta" aria-label="With textarea" placeholder="Escriba su consulta aquí"></textarea>
                               </div>
                             <div class="col-md-12 mt-3 d-md-flex justify-content-md-end">
                                 <button type="submit" class="btn btnColorEnviar">Enviar</button>
