@@ -79,7 +79,7 @@ main {
 }
 
 section {
-  width: 97%;
+  width:97%;
   height: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -93,10 +93,6 @@ section h2 {
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
-}
-
-#contacto {
-  width: 85%;
 }
 
 /** Estilos para el footer */
