@@ -321,6 +321,25 @@ h3 {
   }
 }
 
+/** Estilo seccion Conctato*/
+
+.colorIconoRedes{
+  fill: #20655d;
+}
+.colorFondoFormulario{
+  background-color: #eefdca;
+  color: black;
+  font-weight: bold;
+}
+.btnColorEnviar{
+  background-color:#a5e925 ;
+  color: white;
+  font-weight: bold;
+}
+.btnColorEnviar:hover{
+  background-color:#8bd012 ;
+}
+
 /**Estilo seccion servicios */
 .grilla {
   display: grid;
