@@ -78,7 +78,7 @@ main {
 }
 
 section {
-  width: 97%;
+  width:97%;
   height: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -92,10 +92,6 @@ section h2 {
   font-size: medium;
   margin-bottom: 10px;
   text-align: center;
-}
-
-#contacto {
-  width: 85%;
 }
 
 /** Estilos para el footer */
@@ -350,6 +346,27 @@ h3 {
     height: 50px;
   }
 }
+
+/** Estilo seccion Contacto*/
+
+.colorIconoRedes{
+  fill: #20655d;
+}
+.colorFondoFormulario{
+  background-color: #eefdca;
+  color: black;
+  font-weight: bold;
+}
+.btnColorEnviar{
+  background-color:#a5e925 ;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+}
+.btnColorEnviar:hover{
+  background-color:#8bd012 ;
+}
+
+
 
 /**Estilo seccion servicios */
 .grilla {
