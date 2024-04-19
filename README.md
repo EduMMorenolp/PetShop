@@ -7,6 +7,7 @@ PetShop es un proyecto para una tienda virtual de productos para mascotas. Este 
 - [Descripción](#petshop)
 - [Características](#características)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
+- [Roles](#roles)
 - [Requisitos](#requisitos)
 - [Contribución](#contribuciones)
 - [Autores](#autores)
@@ -30,6 +31,13 @@ PetShop es un proyecto para una tienda virtual de productos para mascotas. Este 
     <img src="https://skillicons.dev/icons?i=html,css,js,figma&perline=14" />
   </a>
 </p>
+
+# Roles
+
+* Representante : Luis Amaison
+* Scrum Master : Eduardo M Moreno
+* Desarrolador : Guillermo Darío Arias
+* Desarroladora : Ferreyra Emilse Antonella
 
 # Requisitos
 Para ejecutar este proyecto localmente, necesitarás:
