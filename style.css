@@ -320,7 +320,7 @@ h3 {
 /**Estilo seccion servicios */
 .grid {
   display: grid;  
-  grid-template-columns: repeat(auto-fill, 20rem);
+  grid-template-columns: repeat(auto-fill, 22rem);
   gap:10px;
   justify-content: center;
   }
@@ -364,7 +364,7 @@ h3 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.733);
     opacity: 0;
     transition: all 500ms ease-out;
     border-radius:20px;
