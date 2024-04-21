@@ -345,6 +345,26 @@ h3 {
   #inicio h3 {
     height: 50px;
   }
+
+  .buttonCarritoOfertas {
+    background-color: #0b2826;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px; 
+  }
+
+  #inicio .addCarrito{
+    color: transparent;
+    background-image: url("./img/extra/carrito.svg");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 0;
+  }
 }
 
 /**Estilo seccion servicios */
