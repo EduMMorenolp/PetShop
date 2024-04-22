@@ -277,7 +277,7 @@ h3 {
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 }
 .producto:hover{
   transform: scale(1.05);
@@ -291,6 +291,59 @@ h3 {
   padding: 0;
   background-color: rgb(230, 245, 20);
 }
+ /*Vista previa producto*/
+ #fondo-vista-previa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco transparente */
+  z-index: 999;
+  display: none; /* Ocultar por defecto */
+}
+ 
+ 
+
+#Vista-previa{
+  display: none;
+  position: fixed;
+  border-radius: 15px;
+  width: 875px;
+  height: 437px;
+  background-color: red;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out; /* Agrega una transición suave */
+  z-index: 1000;
+}
+
+#Vista-previa .ventana {
+  display: flex;
+  width: 100%; /* Ancho total de la ventana emergente */
+  height: 100%; /* Altura total de la ventana emergente */
+}
+
+#Vista-previa .ventana .detalles {
+  flex: 1; /* Ambas partes ocupan el 50% del espacio disponible */
+  padding: 10px; /* Espacio entre la imagen y el texto */
+}
+
+#Vista-previa .ventana .imagen {
+  flex: 1; /* Ambas partes ocupan el 50% del espacio disponible */
+  padding: 10px; /* Espacio entre la imagen y el texto */
+}
+
+#Vista-previa .ventana .imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+   
+}
+
 
 /** Estilos de media query */
 
@@ -299,9 +352,44 @@ h3 {
 }
 /* Pantalla mediana (tabletas): */
 @media all and (min-width: 768px) and (max-width: 1023px) {
+.previsual:hover::after{
+   
+  content: "Vista previa";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: max-content;
+  color: white;
+  padding: 1px;
+  background-color: #20655d;
+  margin-top: auto;
+  text-align: center;
+  font-size: 20px;
+}
 }
 /* Pantalla pequeña (teléfonos): */
-@media all and (max-width: 767px) {
+@media all and (max-width: 767px) { 
+  #Vista-previa .ventana {
+    display: grid;
+}
+#Vista-previa{
+  width:80%;
+  height:90%;
+  top: 58%;
+  left: 50%;
+}
+
+#Vista-previa .ventana .imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+   
+}
+
+
+
+
 }
 
 /** Estilos de media query INICIO */

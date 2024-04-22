@@ -1,0 +1,96 @@
+[
+    {
+        "id": 1,
+        "nombre": "Sieger",
+        "imagen":"1",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+        }
+    },
+    {
+        "id": 2,
+        "nombre": "Sieger",
+        "imagen":"2",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+        }
+    },
+    {
+        "id": 3,
+        "nombre": "Sieger",
+        "imagen":"3",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+            
+        }
+        
+    },
+    {
+        "id": 4,
+        "nombre": "Sieger",
+        "imagen":"4",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+        }
+    },
+    {
+        "id": 5,
+        "nombre": "Sieger",
+        "imagen":"5",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+        }
+    },
+    {
+        "id": 6,
+        "nombre": "Sieger",
+        "imagen":"6",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+            
+        }
+        
+    },
+    {
+        "id": 7,
+        "nombre": "Sieger",
+        "imagen":"7",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+        }
+    },
+    {
+        "id": 8,
+        "nombre": "Sieger",
+        "imagen":"8",
+        "detalles": {
+            "peso": 5 ,
+            "precio":250,
+            "categoria": "perro",
+            "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
+            
+        }
+        
+    }
+]
