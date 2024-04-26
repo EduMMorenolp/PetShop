@@ -79,7 +79,7 @@ function cargarProductos() {
         });
 }
 
-// brir la ventana emergente con los detalles del producto
+// abrir la ventana emergente con los detalles del producto
 function abrir(event) {
     const productoId = event.currentTarget.getAttribute("data-id");
     cargarProductos()
@@ -110,7 +110,7 @@ function abrir(event) {
 }
 
 // Ventana por cada producto
-const productosElements = document.getElementsByClassName("producto");
+const productosElements = document.getElementsByClassName("img_producto");
 for (let i = 0; i < productosElements.length; i++) {
     productosElements[i].addEventListener("click", abrir);
 }

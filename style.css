@@ -304,36 +304,33 @@ h3 {
 }
  
  
-
-#Vista-previa{
+#Vista-previa {
   display: none;
   position: fixed;
   border-radius: 15px;
-  width: 875px;
-  height: 437px;
-  background-color: red;
-  position: fixed;
+  width: 90%;
+  height: 55%;
+  background-color: #fcfcfc;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  transition: transform 0.3s ease-out; /* Agrega una transición suave */
+  transition: transform 0.3s ease-out;
   z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0px 0px 6px 1px rgba(26, 68, 64, 1);
 }
 
 #Vista-previa .ventana {
   display: flex;
-  width: 100%; /* Ancho total de la ventana emergente */
-  height: 100%; /* Altura total de la ventana emergente */
+  width: 100%;
+  height: 100%;
+  
 }
 
-#Vista-previa .ventana .detalles {
-  flex: 1; /* Ambas partes ocupan el 50% del espacio disponible */
-  padding: 10px; /* Espacio entre la imagen y el texto */
-}
-
+#Vista-previa .ventana .detalles,
 #Vista-previa .ventana .imagen {
-  flex: 1; /* Ambas partes ocupan el 50% del espacio disponible */
-  padding: 10px; /* Espacio entre la imagen y el texto */
+  flex: 1;
+  padding: 10px;
 }
 
 #Vista-previa .ventana .imagen img {
@@ -341,19 +338,9 @@ h3 {
   height: auto;
   max-width: 100%;
   max-height: 100%;
-   
 }
 
-
-/** Estilos de media query */
-
-/* Pantalla grande (escritorio): */
-@media all and (min-width: 1024px) {
-}
-/* Pantalla mediana (tabletas): */
-@media all and (min-width: 768px) and (max-width: 1023px) {
-.previsual:hover::after{
-   
+.previsual:hover::after {
   content: "Vista previa";
   position: absolute;
   inset: 0;
@@ -362,35 +349,34 @@ h3 {
   color: white;
   padding: 1px;
   background-color: #20655d;
-  margin-top: auto;
+  margin: auto;
   text-align: center;
   font-size: 20px;
 }
-}
-/* Pantalla pequeña (teléfonos): */
-@media all and (max-width: 767px) { 
+
+/* Media queries */
+@media all and (max-width: 767px) {
+  #Vista-previa {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  
   #Vista-previa .ventana {
     display: grid;
-}
-#Vista-previa{
-  width:80%;
-  height:90%;
-  top: 58%;
-  left: 50%;
-}
+  }
 
-#Vista-previa .ventana .imagen img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  max-height: 100%;
-   
+  #Vista-previa .ventana .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
 }
 
 
 
-
-}
 
 /** Estilos de media query INICIO */
 
