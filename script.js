@@ -1,5 +1,24 @@
 console.log("Bienvenido a PetShop Web")
 
+// AGREGANDO PRODUCTOS 
+// Peticion de productos representando una BD
+var productos = fetch('./productos.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
+        }
+        return response.json();
+    })
+    .then(data => {
+        var productos = data;
+        console.log(productos);
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+
+console.log(productos)
+
 // Navbar
 document.addEventListener("DOMContentLoaded", function () {
     var links = document.querySelectorAll("nav a");
@@ -57,7 +76,7 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
     var resultados = document.getElementById('resultados');
     var encontrados = false;
 
-    resultados.innerHTML = ''; // Limpiar resultados anteriores
+    resultados.innerHTML = '';
 
     if (!encontrados) {
         resultado = document.createElement('div');
@@ -66,6 +85,8 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
         resultados.appendChild(resultado);
     }
 });
+
+
 
 
 

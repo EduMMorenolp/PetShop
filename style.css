@@ -308,6 +308,7 @@ h3 {
 @media all and (max-width: 767px) {
   body {
     font-size: 12px;
+    margin: 1px;
   }
 
   nav ul li {
