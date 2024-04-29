@@ -30,14 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /** SCRIPT TEMPORAL DE AGREGADO */
-var botones = document.querySelectorAll(".addCarrito");
-botones.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-        console.log("Boton presionado");
-        var contador = document.querySelector(".contador");
-        var valorActual = parseInt(contador.innerText);
-        valorActual++;
-        contador.innerText = valorActual;
+
+    var botones = document.querySelectorAll(".addCarrito");
+    botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            console.log("Boton presionado");
+            var contador = document.querySelector(".contador");
+            var valorActual = parseInt(contador.innerText);
+            valorActual++;
+            contador.innerText = valorActual;
     })
 })
 
@@ -97,6 +98,9 @@ function abrir(event) {
                     <p>Precio:$${producto.detalles.precio}</p>
                     
                     <p>${producto.detalles.descripcion}</p>
+                    <div class="Ventana-button">
+                    <button class="addCarrito">Agregar al carrito</button>
+                    </div>
                 </div>
                 </div>
             `;
@@ -105,6 +109,18 @@ function abrir(event) {
             vistaPrevia.innerHTML = htmlContent;
             vistaPrevia.style.display = "block";
             fondoPrevia.previousElementSibling.style.display="block"
+            
+            var botones = document.querySelectorAll(".addCarrito");
+            botones.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    console.log("Boton presionado");
+                    var contador = document.querySelector(".contador");
+                    var valorActual = parseInt(contador.innerText);
+                    valorActual++;
+                    contador.innerText = valorActual;
+    })
+})
+
         })
         .catch(error => console.error(error));
 }
