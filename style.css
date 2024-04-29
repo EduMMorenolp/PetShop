@@ -148,30 +148,6 @@ footer img {
   padding-left: 10px;
 }
 
-/** Estilos para los formularios */
-form {
-  margin-top: 20px;
-}
-
-label {
-  display: block;
-  margin-bottom: 5px;
-  cursor: url("./img/extra/cursor.svg"), auto !important;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-textarea,
-button {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  cursor: url("./img/extra/cursor2.svg"), auto !important;
-}
-
 button {
   width: 75%;
   padding: 5px;
@@ -348,25 +324,94 @@ h3 {
 }
 
 /** Estilo seccion Contacto*/
+.estilos_form_contactos{
+  padding: 10px 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  text-align: center;
+}
 
-.colorIconoRedes{
-  fill: #20655d;
+.estilos_form_contactos label{
+  color:#000000;
+  font-size: 15px;
+  font-weight: 600;
+  margin:10px;
 }
-.colorFondoFormulario{
-  background-color: #eefdca;
-  color: black;
-  font-weight: bold;
+
+.estilos_form_contactos input,textarea{
+  padding:15px 15px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+
 }
-.btnColorEnviar{
-  background-color:#a5e925 ;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
+
+.estilos_form_contactos select{
+  margin:10px;
+  border-radius: 5px;
+}
+.input-group{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .btnColorEnviar:hover{
   background-color:#8bd012 ;
 }
 
 
+.grid_contactos{
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr;
+
+  grid-template-areas: "redes form"
+                        "ubicacion form";
+  gap: 20px;
+  
+}
+
+.grid_redes{
+  grid-area: redes;
+}
+.grid_redes ul{
+  display: flex;
+  ;
+  list-style-type: none;
+  padding-left: 0;
+}
+.grid_redes ul li{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.grid_ubicacion{
+  grid-area: ubicacion;
+}
+
+.grid_formulario{
+  display: flex;
+  flex-direction: column;
+  grid-area: form;
+}
+
+.colorIconoRedes{
+  fill: #20655d;
+}
+
+@media (max-width: 768px){
+  .grid_contactos{
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  
+    grid-template-areas:  "redes"
+                          "ubicacion"
+                          "form";
+    gap: 5px;
+}
+}
 
 /**Estilo seccion servicios */
 .grilla {
