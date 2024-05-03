@@ -337,97 +337,6 @@ h3 {
   font-size: 20px;
 }
 
-/** Estilos de media query */
-
-/* Pantalla grande (escritorio): */
-@media all and (min-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
-}
-/* Pantalla mediana (tabletas): */
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 15px;
-  }
-}
-/* Pantalla pequeña (teléfonos): */
-@media all and (max-width: 767px) {
-  body {
-    font-size: 14px;
-    margin: 1px;
-  }
-
-  nav ul li {
-    margin-right: 0;
-  }
-
-  nav ul li a {
-    margin: 3px;
-  }
-
-  /** Estilos de media query PRODUCTOS */
-  #Vista-previa {
-    width: 80%;
-    height: auto;
-    max-width: 400px;
-    overflow: hidden;
-  }
-
-  #Vista-previa .ventana {
-    display: grid;
-  }
-
-  #Vista-previa .ventana .imagen img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  /** Estilos de media query INICIO */
-  #inicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  #ofertas {
-    order: 2;
-  }
-
-  #buscador {
-    order: 1;
-    display: inline-block;
-    width: 90%;
-    padding: 0;
-  }
-
-  #inicio p,
-  h3 {
-    margin: 1px;
-    margin-top: 3px;
-  }
-
-  #inicio h3 {
-    height: 50px;
-  }
-
-  /* Estilos de media query CONTACTOS */
-  .grid_contactos {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-
-    grid-template-areas:
-      "redes"
-      "ubicacion"
-      "form";
-    gap: 5px;
-  }
-}
-
 /** Estilo seccion Contacto*/
 .estilos_form_contactos {
   padding: 10px 10px;
@@ -557,4 +466,116 @@ textarea {
 .imagenServicio:hover * {
   transform: translateY(8px);
   opacity: 1;
+}
+
+/** Estilos de media query */
+
+/* Pantalla grande (escritorio): */
+@media all and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* Pantalla mediana (tabletas): */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 15px;
+  }
+}
+/* Pantalla pequeña (teléfonos): */
+@media all and (max-width: 767px) {
+  body {
+    font-size: 14px;
+    margin: 1px;
+  }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    margin: 3px;
+  }
+
+  /** Estilos de media query PRODUCTOS */
+  #Vista-previa {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    overflow: hidden;
+  }
+
+  #Vista-previa .ventana {
+    display: grid;
+  }
+
+  #Vista-previa .ventana .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /** Estilos de media query INICIO */
+  #inicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #ofertas {
+    order: 2;
+  }
+
+  #buscador {
+    order: 1;
+    display: inline-block;
+    width: 90%;
+    padding: 0;
+  }
+
+  #inicio p,
+  h3 {
+    margin: 1px;
+    margin-top: 3px;
+  }
+
+  #inicio h3 {
+    height: 50px;
+  }
+
+  .buttonCarritoOfertas {
+    background-color: #0b2826;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    padding: 10px; 
+    margin-top: 5px;
+  }
+
+  #inicio .addCarrito{
+    color: transparent;
+    background-image: url("./img/extra/carrito.svg");
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    border: 0;
+  }
+
+  /* Estilos de media query CONTACTOS */
+  .grid_contactos {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+
+    grid-template-areas:
+      "redes"
+      "ubicacion"
+      "form";
+    gap: 5px;
+  }
 }
