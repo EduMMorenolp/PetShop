@@ -337,7 +337,21 @@ h3 {
   font-size: 20px;
 }
 
-/* Media queries */
+/** Estilos de media query */
+
+/* Pantalla grande (escritorio): */
+@media all and (min-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+}
+/* Pantalla mediana (tabletas): */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 14px;
+  }
+}
+/* Pantalla pequeña (teléfonos): */
 @media all and (max-width: 767px) {
   body {
     font-size: 12px;
