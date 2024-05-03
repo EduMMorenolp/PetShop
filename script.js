@@ -30,14 +30,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 /** SCRIPT TEMPORAL DE AGREGADO */
-var botones = document.querySelectorAll(".addCarrito");
-botones.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-        console.log("Boton presionado");
-        var contador = document.querySelector(".contador");
-        var valorActual = parseInt(contador.innerText);
-        valorActual++;
-        contador.innerText = valorActual;
+
+    var botones = document.querySelectorAll(".addCarrito");
+    botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            console.log("Boton presionado");
+            var contador = document.querySelector(".contador");
+            var valorActual = parseInt(contador.innerText);
+            valorActual++;
+            contador.innerText = valorActual;
     })
 })
 
@@ -67,29 +68,81 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
     }
 });
 
+/* VISUALISACION PREVIA DEL PRODUCTO */
+// Función para cargar los productos desde el JSON utilizando fetch
+function cargarProductos() {
+    return fetch('productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar los productos');
+            }
+            return response.json();
+        });
+}
 
+// abrir la ventana emergente con los detalles del producto
+function abrir(event) {
+    const productoId = event.currentTarget.getAttribute("data-id");
+    cargarProductos()
+        .then(productos => {
+            const producto = productos.find(item => item.id === parseInt(productoId));
+            const htmlContent = `
+                <div class="ventana">
+                <div class="imagen">
+                    <img src="/img/productos/${producto.imagen}.webp" alt="Imagen del producto">
+                </div>
+                <div class="detalles">
+                    <h2>${producto.nombre}</h2>
+                    <p>Categoria: ${producto.detalles.categoria}</p>
+                    <p>Peso: ${producto.detalles.peso} Kg</p>
+                    <p>Precio:$${producto.detalles.precio}</p>
+                    
+                    <p>${producto.detalles.descripcion}</p>
+                    <div class="Ventana-button">
+                    <button class="addCarrito">Agregar al carrito</button>
+                    </div>
+                </div>
+                </div>
+            `;
+            const fondoPrevia = document.getElementById("Vista-previa");
+            const vistaPrevia = document.getElementById("Vista-previa");
+            vistaPrevia.innerHTML = htmlContent;
+            vistaPrevia.style.display = "block";
+            fondoPrevia.previousElementSibling.style.display="block"
+            
+            var botones = document.querySelectorAll(".addCarrito");
+            botones.forEach(function (boton) {
+                boton.addEventListener("click", function () {
+                    console.log("Boton presionado");
+                    var contador = document.querySelector(".contador");
+                    var valorActual = parseInt(contador.innerText);
+                    valorActual++;
+                    contador.innerText = valorActual;
+    })
+})
 
+        })
+        .catch(error => console.error(error));
+}
 
+// Ventana por cada producto
+const productosElements = document.getElementsByClassName("img_producto");
+for (let i = 0; i < productosElements.length; i++) {
+    productosElements[i].addEventListener("click", abrir);
+}
 
+// Cerrar la ventana emergente
+function cerrar(event) {
+    const vistaPrevia = document.getElementById("Vista-previa");
+    const fondoPrevio =document.getElementById('fondo-vista-previa');
+    if (!vistaPrevia.contains(event.target)) {
+        vistaPrevia.style.display = "none";
+        fondoPrevio.style.display = 'none';
+    }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Agregar evento de clic al documento para cerrar la ventana emergente
+document.addEventListener("click", cerrar);
 
 
 

@@ -251,7 +251,7 @@ h3 {
   border-radius: 15px;
   overflow: hidden;
   text-align: center;
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 }
 .producto:hover {
   transform: scale(1.05);
@@ -265,34 +265,102 @@ h3 {
   padding: 0;
   background-color: rgb(230, 245, 20);
 }
-
-/** Estilos de media query */
-
-/* Pantalla grande (escritorio): */
-@media all and (min-width: 1024px) {
-  body {
-    font-size: 16px;
-  }
+ /*Vista previa producto*/
+ #fondo-vista-previa {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Fondo blanco transparente */
+  z-index: 999;
+  display: none; /* Ocultar por defecto */
 }
-/* Pantalla mediana (tabletas): */
-@media all and (min-width: 768px) and (max-width: 1023px) {
-  body {
-    font-size: 14px;
-  }
+ 
+ 
+#Vista-previa {
+  display: none;
+  position: fixed;
+  border-radius: 15px;
+  
+  width: 90%;
+  max-width: 900px;
+  height: 55%;
+  background-color: #fcfcfc;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.3s ease-out;
+  z-index: 1000;
+  overflow: hidden;
+  box-shadow: 0px 0px 60px 10px rgba(26, 68, 64, 1);
 }
-/* Pantalla pequeña (teléfonos): */
+
+#Vista-previa .ventana {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  
+}
+
+#Vista-previa .ventana .detalles,
+#Vista-previa .ventana .imagen {
+  flex: 1;
+  padding: 10px;
+}
+
+#Vista-previa .ventana .imagen img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+#Vista-previa .detalles .Ventana-button {
+  position: sticky;
+  bottom: 10px; /* ajusta la distancia del botón al borde inferior */
+  top: 90%;
+  text-align: center;
+  
+}
+
+.previsual:hover::after {
+  content: "Vista previa";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: max-content;
+  color: white;
+  padding: 1px;
+  background-color: #20655d;
+  margin: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* Media queries */
 @media all and (max-width: 767px) {
-  body {
-    font-size: 12px;
+  #Vista-previa {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    overflow: hidden;
+  }
+  
+  #Vista-previa .ventana {
+    display: grid;
   }
 
-  nav ul li {
-    margin-right: 0;
+  #Vista-previa .ventana .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
+}
 
-  nav ul li a {
-    margin: 3px;
-  }
+
+
+
 
   /** Estilos de media query INICIO */
   #inicio {
