@@ -388,7 +388,6 @@ textarea {
   grid-area: redes;
 }
 .grid_redes ul {
-  display: flex;
   list-style-type: none;
   padding-left: 0;
 }
@@ -577,5 +576,9 @@ textarea {
       "ubicacion"
       "form";
     gap: 5px;
+  }
+
+  .grid_redes ul {
+    display: block;
   }
 }

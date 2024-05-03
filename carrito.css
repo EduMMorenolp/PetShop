@@ -34,3 +34,95 @@ main {
     border-radius: 5px;
     padding: 5px 10px;
 }
+
+/** Estilos para el header */
+header {
+  background-color: #1d4440;
+  color: #f2fbf9;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  position: sticky;
+  top: 5px;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 70px;
+  padding-left: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  font-size: 1em;
+  color: #f2fbf9;
+  text-decoration: none;
+  cursor: url("./img/extra/cursor2.svg"), auto;
+}
+
+nav ul li a:hover {
+  color: yellowgreen;
+}
+
+nav ul li a img {
+  width: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.carrito-icon {
+  display: flex;
+  align-items: center;
+}
+
+.contador {
+  background-color: #f2fbf9;
+  color: #1d4440;
+  border-radius: 30%;
+  padding: 8px;
+  margin-left: 5px;
+}
+
+/** Estilos de media query */
+
+/* Pantalla grande (escritorio): */
+@media all and (min-width: 1024px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  /* Pantalla mediana (tabletas): */
+  @media all and (min-width: 768px) and (max-width: 1023px) {
+    body {
+      font-size: 15px;
+    }
+  }
+  /* Pantalla pequeña (teléfonos): */
+  @media all and (max-width: 767px) {
+    body {
+      font-size: 12px;
+      margin: 1px;
+    }
+  
+    nav ul li {
+      margin-right: 0;
+    }
+  
+    nav ul li a {
+      margin: 3px;
+    }
+  }
