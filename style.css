@@ -348,6 +348,13 @@ h3 {
   
   #Vista-previa .ventana {
     display: grid;
+  body {
+    font-size: 12px;
+    margin: 1px;
+  }
+
+  nav ul li {
+    margin-right: 0;
   }
 
   #Vista-previa .ventana .imagen img {
@@ -482,44 +489,59 @@ h3 {
 }
 
 /**Estilo seccion servicios */
-.grilla {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 14px;
-  padding: 20px;
-}
-
-.grilla div img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-}
-
-.tipoServicio {
-  display: flex;
+.grid {
+  display: grid;  
+  grid-template-columns: repeat(auto-fill, 22rem);
+  gap:10px;
   justify-content: center;
-  text-align: center;
-  position: relative;
-}
-
-.textoServicio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.tipoServicio:hover * {
-  transform: translateY(8px);
-  opacity: 1;
-}
+  }
+  
+  
+  .tarjeta {
+    display: flex;
+    flex-direction: column; /* Alinea el contenido en columna */
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center;
+    padding:7px;
+  }
+  
+  .imagenServicio img {
+    max-width: 100%;
+    height: auto;
+    border-radius:20px;
+    box-shadow: 5px 8px 12px black;
+  }
+  
+  .titulo_imagen p {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: #309C8C 1px 0 10px;
+  }
+  
+  .imagenServicio {
+    position: relative;
+  }
+  
+  .textoServicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    box-sizing: border-box;
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.733);
+    opacity: 0;
+    transition: all 500ms ease-out;
+    border-radius:20px;
+  }
+  
+  .imagenServicio:hover *{
+    transform: translateY(8px);
+    opacity: 1;
+  }
