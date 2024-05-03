@@ -78,7 +78,7 @@ main {
 }
 
 section {
-  width:97%;
+  width: 97%;
   height: 100%;
   margin: 0 auto;
   border-radius: 10px;
@@ -155,7 +155,6 @@ button {
   background-color: #0b2826;
   color: #fff;
   cursor: pointer;
-  
 }
 
 button:hover {
@@ -164,6 +163,10 @@ button:hover {
 
 /** Estilos de Seccion INICIO */
 
+#buscador button {
+  width: 100%;
+  margin-top: 5px;
+}
 #inicio {
   margin-top: 10px;
   display: grid;
@@ -265,8 +268,8 @@ h3 {
   padding: 0;
   background-color: rgb(230, 245, 20);
 }
- /*Vista previa producto*/
- #fondo-vista-previa {
+/*Vista previa producto*/
+#fondo-vista-previa {
   position: fixed;
   top: 0;
   left: 0;
@@ -276,13 +279,12 @@ h3 {
   z-index: 999;
   display: none; /* Ocultar por defecto */
 }
- 
- 
+
 #Vista-previa {
   display: none;
   position: fixed;
   border-radius: 15px;
-  
+
   width: 90%;
   max-width: 900px;
   height: 55%;
@@ -300,7 +302,6 @@ h3 {
   display: flex;
   width: 100%;
   height: 100%;
-  
 }
 
 #Vista-previa .ventana .detalles,
@@ -320,7 +321,6 @@ h3 {
   bottom: 10px; /* ajusta la distancia del botón al borde inferior */
   top: 90%;
   text-align: center;
-  
 }
 
 .previsual:hover::after {
@@ -339,15 +339,6 @@ h3 {
 
 /* Media queries */
 @media all and (max-width: 767px) {
-  #Vista-previa {
-    width: 80%;
-    height: auto;
-    max-width: 400px;
-    overflow: hidden;
-  }
-  
-  #Vista-previa .ventana {
-    display: grid;
   body {
     font-size: 12px;
     margin: 1px;
@@ -357,17 +348,27 @@ h3 {
     margin-right: 0;
   }
 
+  nav ul li a {
+    margin: 3px;
+  }
+
+  #Vista-previa {
+    width: 80%;
+    height: auto;
+    max-width: 400px;
+    overflow: hidden;
+  }
+
+  #Vista-previa .ventana {
+    display: grid;
+  }
+
   #Vista-previa .ventana .imagen img {
     width: 100%;
     height: auto;
     max-width: 100%;
     max-height: 100%;
   }
-}
-
-
-
-
 
   /** Estilos de media query INICIO */
   #inicio {
@@ -399,149 +400,147 @@ h3 {
 }
 
 /** Estilo seccion Contacto*/
-.estilos_form_contactos{
+.estilos_form_contactos {
   padding: 10px 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   text-align: center;
 }
 
-.estilos_form_contactos label{
-  color:#000000;
+.estilos_form_contactos label {
+  color: #000000;
   font-size: 15px;
   font-weight: 600;
-  margin:10px;
+  margin: 10px;
 }
 
-.estilos_form_contactos input,textarea{
-  padding:15px 15px;
+.estilos_form_contactos input,
+textarea {
+  padding: 15px 15px;
   border-radius: 10px;
   margin-bottom: 10px;
-
 }
 
-.estilos_form_contactos select{
-  margin:10px;
+.estilos_form_contactos select {
+  margin: 10px;
   border-radius: 5px;
 }
-.input-group{
+.input-group {
   display: flex;
   flex-direction: column;
   text-align: center;
 }
-.btnColorEnviar:hover{
-  background-color:#8bd012 ;
+.btnColorEnviar:hover {
+  background-color: #8bd012;
 }
 
-
-.grid_contactos{
+.grid_contactos {
   display: grid;
   text-align: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.5fr 1fr;
 
-  grid-template-areas: "redes form"
-                        "ubicacion form";
+  grid-template-areas:
+    "redes form"
+    "ubicacion form";
   gap: 20px;
-  
 }
 
-.grid_redes{
+.grid_redes {
   grid-area: redes;
 }
-.grid_redes ul{
+.grid_redes ul {
   display: flex;
-  ;
   list-style-type: none;
   padding-left: 0;
 }
-.grid_redes ul li{
+.grid_redes ul li {
   display: inline-block;
   margin-right: 10px;
 }
 
-.grid_ubicacion{
+.grid_ubicacion {
   grid-area: ubicacion;
 }
 
-.grid_formulario{
+.grid_formulario {
   display: flex;
   flex-direction: column;
   grid-area: form;
 }
 
-.colorIconoRedes{
+.colorIconoRedes {
   fill: #20655d;
 }
 
-@media (max-width: 768px){
-  .grid_contactos{
+@media (max-width: 768px) {
+  .grid_contactos {
     display: grid;
     text-align: center;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-  
-    grid-template-areas:  "redes"
-                          "ubicacion"
-                          "form";
+
+    grid-template-areas:
+      "redes"
+      "ubicacion"
+      "form";
     gap: 5px;
-}
+  }
 }
 
 /**Estilo seccion servicios */
 .grid {
-  display: grid;  
+  display: grid;
   grid-template-columns: repeat(auto-fill, 22rem);
-  gap:10px;
+  gap: 10px;
   justify-content: center;
-  }
-  
-  
-  .tarjeta {
-    display: flex;
-    flex-direction: column; /* Alinea el contenido en columna */
-    align-items: center; /* Centra horizontalmente */
-    justify-content: center;
-    padding:7px;
-  }
-  
-  .imagenServicio img {
-    max-width: 100%;
-    height: auto;
-    border-radius:20px;
-    box-shadow: 5px 8px 12px black;
-  }
-  
-  .titulo_imagen p {
-    font-size: 20px;
-    font-weight: bold;
-    text-shadow: #309C8C 1px 0 10px;
-  }
-  
-  .imagenServicio {
-    position: relative;
-  }
-  
-  .textoServicio{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align:center;
-    box-sizing: border-box;
-    font-size: 25px;
-    font-weight: bold;
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.733);
-    opacity: 0;
-    transition: all 500ms ease-out;
-    border-radius:20px;
-  }
-  
-  .imagenServicio:hover *{
-    transform: translateY(8px);
-    opacity: 1;
-  }
+}
+
+.tarjeta {
+  display: flex;
+  flex-direction: column; /* Alinea el contenido en columna */
+  align-items: center; /* Centra horizontalmente */
+  justify-content: center;
+  padding: 7px;
+}
+
+.imagenServicio img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 5px 8px 12px black;
+}
+
+.titulo_imagen p {
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: #309c8c 1px 0 10px;
+}
+
+.imagenServicio {
+  position: relative;
+}
+
+.textoServicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 25px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.733);
+  opacity: 0;
+  transition: all 500ms ease-out;
+  border-radius: 20px;
+}
+
+.imagenServicio:hover * {
+  transform: translateY(8px);
+  opacity: 1;
+}
