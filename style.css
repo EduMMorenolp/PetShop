@@ -348,13 +348,13 @@ h3 {
 /* Pantalla mediana (tabletas): */
 @media all and (min-width: 768px) and (max-width: 1023px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
   }
 }
 /* Pantalla pequeña (teléfonos): */
 @media all and (max-width: 767px) {
   body {
-    font-size: 12px;
+    font-size: 14px;
     margin: 1px;
   }
 
@@ -366,6 +366,7 @@ h3 {
     margin: 3px;
   }
 
+  /** Estilos de media query PRODUCTOS */
   #Vista-previa {
     width: 80%;
     height: auto;
@@ -410,6 +411,20 @@ h3 {
 
   #inicio h3 {
     height: 50px;
+  }
+
+  /* Estilos de media query CONTACTOS */
+  .grid_contactos {
+    display: grid;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+
+    grid-template-areas:
+      "redes"
+      "ubicacion"
+      "form";
+    gap: 5px;
   }
 }
 
@@ -485,21 +500,6 @@ textarea {
 
 .colorIconoRedes {
   fill: #20655d;
-}
-
-@media (max-width: 768px) {
-  .grid_contactos {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-
-    grid-template-areas:
-      "redes"
-      "ubicacion"
-      "form";
-    gap: 5px;
-  }
 }
 
 /**Estilo seccion servicios */
