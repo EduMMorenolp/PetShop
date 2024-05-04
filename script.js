@@ -47,20 +47,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-/** SCRIPT TEMPORAL DE AGREGADO */
-
-var botones = document.querySelectorAll(".addCarrito");
-botones.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-        console.log("Boton presionado");
-        var contador = document.querySelector(".contador");
-        var valorActual = parseInt(contador.innerText);
-        valorActual++;
-        contador.innerText = valorActual;
-    })
-})
-
 /** SCRIPT TEMPORAL DE BORRADO */
 // Obtener todos los botones de eliminar
 var botonesEliminar = document.querySelectorAll('.eliminar');
@@ -99,7 +85,31 @@ function cargarProductos() {
         });
 }
 
-// abrir la ventana emergente con los detalles del producto
+// Almacenar una referencia a la función de manejo de clic
+function agregarAlCarrito() {
+    console.log("Boton presionado");
+    var contador = document.querySelector(".contador");
+    var valorActual = parseInt(contador.innerText);
+    valorActual++;
+    contador.innerText = valorActual;
+}
+
+// Función para eliminar los event listeners anteriores
+function limpiarEventListeners() {
+    var botones = document.querySelectorAll(".addCarrito");
+    botones.forEach(function (boton) {
+        boton.removeEventListener("click", agregarAlCarrito);
+    });
+}
+
+// Agregar event listeners inicialmente
+limpiarEventListeners();
+var botones = document.querySelectorAll(".addCarrito");
+botones.forEach(function (boton) {
+    boton.addEventListener("click", agregarAlCarrito);
+});
+
+// Modificar la función abrir para limpiar los event listeners antes de agregar nuevos
 function abrir(event) {
     const productoId = event.currentTarget.getAttribute("data-id");
     cargarProductos()
@@ -129,16 +139,12 @@ function abrir(event) {
             vistaPrevia.style.display = "block";
             fondoPrevia.previousElementSibling.style.display = "block"
 
+            // Limpiar event listeners anteriores antes de agregar nuevos
+            limpiarEventListeners();
             var botones = document.querySelectorAll(".addCarrito");
             botones.forEach(function (boton) {
-                boton.addEventListener("click", function () {
-                    console.log("Boton presionado");
-                    var contador = document.querySelector(".contador");
-                    var valorActual = parseInt(contador.innerText);
-                    valorActual++;
-                    contador.innerText = valorActual;
-                })
-            })
+                boton.addEventListener("click", agregarAlCarrito);
+            });
 
         })
         .catch(error => console.error(error));
