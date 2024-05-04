@@ -50,14 +50,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 /** SCRIPT TEMPORAL DE AGREGADO */
 
-    var botones = document.querySelectorAll(".addCarrito");
-    botones.forEach(function (boton) {
-        boton.addEventListener("click", function () {
-            console.log("Boton presionado");
-            var contador = document.querySelector(".contador");
-            var valorActual = parseInt(contador.innerText);
-            valorActual++;
-            contador.innerText = valorActual;
+var botones = document.querySelectorAll(".addCarrito");
+botones.forEach(function (boton) {
+    boton.addEventListener("click", function () {
+        console.log("Boton presionado");
+        var contador = document.querySelector(".contador");
+        var valorActual = parseInt(contador.innerText);
+        valorActual++;
+        contador.innerText = valorActual;
     })
 })
 
@@ -108,7 +108,7 @@ function abrir(event) {
             const htmlContent = `
                 <div class="ventana">
                 <div class="imagen">
-                    <img src="/img/productos/${producto.imagen}.webp" alt="Imagen del producto">
+                    <img src="./img/productos/${producto.imagen}.webp" alt="Imagen del producto">
                 </div>
                 <div class="detalles">
                     <h2>${producto.nombre}</h2>
@@ -127,8 +127,8 @@ function abrir(event) {
             const vistaPrevia = document.getElementById("Vista-previa");
             vistaPrevia.innerHTML = htmlContent;
             vistaPrevia.style.display = "block";
-            fondoPrevia.previousElementSibling.style.display="block"
-            
+            fondoPrevia.previousElementSibling.style.display = "block"
+
             var botones = document.querySelectorAll(".addCarrito");
             botones.forEach(function (boton) {
                 boton.addEventListener("click", function () {
@@ -137,8 +137,8 @@ function abrir(event) {
                     var valorActual = parseInt(contador.innerText);
                     valorActual++;
                     contador.innerText = valorActual;
-    })
-})
+                })
+            })
 
         })
         .catch(error => console.error(error));
@@ -153,7 +153,7 @@ for (let i = 0; i < productosElements.length; i++) {
 // Cerrar la ventana emergente
 function cerrar(event) {
     const vistaPrevia = document.getElementById("Vista-previa");
-    const fondoPrevio =document.getElementById('fondo-vista-previa');
+    const fondoPrevio = document.getElementById('fondo-vista-previa');
     if (!vistaPrevia.contains(event.target)) {
         vistaPrevia.style.display = "none";
         fondoPrevio.style.display = 'none';
