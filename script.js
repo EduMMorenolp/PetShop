@@ -45,6 +45,17 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
 });
 
 /* VISUALISACION PREVIA DEL PRODUCTOS */
+// Función para cargar los productos desde el JSON utilizando fetch
+function cargarProductos() {
+    return fetch('productos.json')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error al cargar los productos');
+            }
+            return response.json();
+        });
+}
+
 
 var carritoProductos = [];
 
@@ -72,7 +83,7 @@ function limpiarEventListeners() {
 limpiarEventListeners();
 var botones = document.querySelectorAll(".addCarrito");
 botones.forEach(function (boton) {
-    boton.addEventListener("click", function() {
+    boton.addEventListener("click", function () {
         // Obtener el ID del producto del atributo data-id
         var idProducto = boton.getAttribute("data-id");
         agregarAlCarrito(idProducto);
@@ -97,9 +108,6 @@ function abrir(event) {
                     <p>Precio:$${producto.detalles.precio}</p>
                     
                     <p>${producto.detalles.descripcion}</p>
-                    <div class="Ventana-button">
-                    <button class="addCarrito">Agregar al carrito</button>
-                    </div>
                 </div>
                 </div>
             `;
@@ -111,11 +119,10 @@ function abrir(event) {
 
             // Limpiar event listeners anteriores antes de agregar nuevos
             limpiarEventListeners();
-            var botones = document.querySelectorAll(".addCarrito");
-            botones.forEach(function (boton) {
-                boton.addEventListener("click", agregarAlCarrito);
-            });
-
+            // var botones = document.querySelectorAll(".addCarrito");
+            // botones.forEach(function (boton) {
+            //     boton.addEventListener("click", agregarAlCarrito);
+            // });
         })
         .catch(error => console.error(error));
 }
