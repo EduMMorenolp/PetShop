@@ -1,24 +1,5 @@
 console.log("Bienvenido a PetShop Web")
 
-// AGREGANDO PRODUCTOS 
-// Peticion de productos representando una BD
-var productos = fetch('./productos.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Error al cargar el archivo JSON');
-        }
-        return response.json();
-    })
-    .then(data => {
-        var productos = data;
-        console.log(productos);
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-
-console.log(productos)
-
 // Navbar
 document.addEventListener("DOMContentLoaded", function () {
     var links = document.querySelectorAll("nav a");
@@ -47,22 +28,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-/** SCRIPT TEMPORAL DE BORRADO */
-// Obtener todos los botones de eliminar
-var botonesEliminar = document.querySelectorAll('.eliminar');
-botonesEliminar.forEach(function (boton) {
-    boton.addEventListener('click', function () {
-        console.log('Botón eliminar presionado');
-        var producto = this.closest('.producto');
-        producto.remove();
-    });
-});
+
 
 // BUSCADOR INICIO
 document.getElementById('botonBuscar').addEventListener('click', function () {
     var resultados = document.getElementById('resultados');
     var encontrados = false;
-
     resultados.innerHTML = '';
 
     if (!encontrados) {
@@ -73,25 +44,20 @@ document.getElementById('botonBuscar').addEventListener('click', function () {
     }
 });
 
-/* VISUALISACION PREVIA DEL PRODUCTO */
-// Función para cargar los productos desde el JSON utilizando fetch
-function cargarProductos() {
-    return fetch('productos.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Error al cargar los productos');
-            }
-            return response.json();
-        });
-}
+/* VISUALISACION PREVIA DEL PRODUCTOS */
+
+var carritoProductos = [];
 
 // Almacenar una referencia a la función de manejo de clic
-function agregarAlCarrito() {
+function agregarAlCarrito(idProducto) {
     console.log("Boton presionado");
     var contador = document.querySelector(".contador");
     var valorActual = parseInt(contador.innerText);
     valorActual++;
     contador.innerText = valorActual;
+    carritoProductos.push(idProducto);
+    localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
+    console.log("Producto agregado al carrito. ID:", idProducto);
 }
 
 // Función para eliminar los event listeners anteriores
@@ -106,7 +72,11 @@ function limpiarEventListeners() {
 limpiarEventListeners();
 var botones = document.querySelectorAll(".addCarrito");
 botones.forEach(function (boton) {
-    boton.addEventListener("click", agregarAlCarrito);
+    boton.addEventListener("click", function() {
+        // Obtener el ID del producto del atributo data-id
+        var idProducto = boton.getAttribute("data-id");
+        agregarAlCarrito(idProducto);
+    });
 });
 
 // Modificar la función abrir para limpiar los event listeners antes de agregar nuevos

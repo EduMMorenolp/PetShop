@@ -27,22 +27,6 @@
         </nav>
     </header>
     <main>
-        <div class="producto">
-            <img src="./img/productos/Ofert2.webp" alt="Producto 1">
-            <div class="descripcion">
-                <h2>EXCELLENT PUPPY</h2>
-                <p>Precio: $15</p>
-                <button class="eliminar">Eliminar</button>
-            </div>
-        </div>
-        <div class="producto">
-            <img src="./img/productos/Ofert1.webp" alt="Producto 2">
-            <div class="descripcion">
-                <h2>GATI PESCADO Y SALMON</h2>
-                <p>Precio: $10</p>
-                <button class="eliminar">Eliminar</button>
-            </div>
-        </div>
     </main>
     <footer>
         <div id="formasDePago">
@@ -105,7 +89,147 @@
             </ul>
         </div>
     </footer>
-    <script src="./script.js"></script>
+    <script>
+        var productos = {
+            "productos": [
+                {
+                    "id": "01",
+                    "nombre": "GATI PESCADO Y SALMON",
+                    "imagen": "./img/productos/Ofert1.webp",
+                    "descripcion": "10% OFF",
+                    "precio": "$10"
+                },
+                {
+                    "id": "02",
+                    "nombre": "EXCELLENT PUPPY",
+                    "imagen": "./img/productos/Ofert2.webp",
+                    "descripcion": "30% OFF",
+                    "precio": "$15"
+                },
+                {
+                    "id": "03",
+                    "nombre": "PRO PLAN PUPPY MEDIANO",
+                    "imagen": "./img/productos/Ofert3.webp",
+                    "descripcion": "15% OFF",
+                    "precio": "$20"
+                },
+                {
+                    "id": "1",
+                    "nombre": "Sieger",
+                    "imagen": "img/productos/1.webp",
+                    "descripcion": "2kg Gratis",
+                    "precio": "$150"
+                },
+                {
+                    "id": "2",
+                    "nombre": "Cat Chow",
+                    "imagen": "img/productos/2.webp",
+                    "descripcion": "3kg Gratis",
+                    "precio": "$180"
+                },
+                {
+                    "id": "3",
+                    "nombre": "Complete",
+                    "imagen": "img/productos/3.webp",
+                    "descripcion": "2kg Gratis",
+                    "precio": "$118"
+                },
+                {
+                    "id": "4",
+                    "nombre": "Balanced",
+                    "imagen": "img/productos/4.webp",
+                    "descripcion": "2kg Gratis",
+                    "precio": "$141"
+                },
+                {
+                    "id": "5",
+                    "nombre": "Dog Selection",
+                    "imagen": "img/productos/5.webp",
+                    "descripcion": "2kg Gratis",
+                    "precio": "$114"
+                },
+                {
+                    "id": "6",
+                    "nombre": "Eukanuba",
+                    "imagen": "img/productos/6.webp",
+                    "descripcion": "20% Gratis",
+                    "precio": "$135"
+                },
+                {
+                    "id": "7",
+                    "nombre": "Ken-l",
+                    "imagen": "img/productos/7.webp",
+                    "descripcion": "3kg Gratis",
+                    "precio": "$167"
+                },
+                {
+                    "id": "8",
+                    "nombre": "Premium",
+                    "imagen": "img/productos/8.webp",
+                    "descripcion": "2kg Gratis",
+                    "precio": "$147"
+                }
+            ]
+        }
+    </script>
+    <script>
+        var carritoProductos = JSON.parse(localStorage.getItem("carritoProductos"));
+
+        var carritoContador = carritoProductos.length;
+
+        var contadorSpan = document.querySelector(".contador");
+        contadorSpan.textContent = carritoContador.toString();
+
+        // Obtener una referencia al elemento <main> donde se mostrarán los productos en el carrito
+        var mainElement = document.querySelector("main");
+
+        // Función para agregar productos al carrito en el HTML
+        function agregarProductosAlCarritoHTML() {
+            // Iterar sobre los IDs de los productos en el carrito
+            carritoProductos.forEach(function (idProducto) {
+                // Buscar el producto correspondiente en el JSON
+                var producto = productos.productos.find(function (item) {
+                    return item.id === idProducto;
+                });
+
+                // Verificar si se encontró el producto
+                if (producto) {
+                    // Crear el HTML para mostrar el producto en el carrito
+                    var productoHTML = `
+                <div class="producto">
+                    <img src="${producto.imagen}" alt="${producto.nombre}">
+                    <div class="descripcion">
+                        <h2>${producto.nombre}</h2>
+                        <p>Precio: ${producto.precio}</p>
+                        <button class="eliminar">Eliminar</button>
+                    </div>
+                </div>
+            `;
+                    // Agregar el HTML del producto al elemento <main>
+                    mainElement.insertAdjacentHTML("beforeend", productoHTML);
+                }
+            });
+        }
+
+        // Llamar a la función para agregar productos al carrito en el HTML
+        agregarProductosAlCarritoHTML();
+
+        /** SCRIPT TEMPORAL DE BORRADO */
+        // Obtener todos los botones de eliminar
+        var botonesEliminar = document.querySelectorAll('.eliminar');
+        botonesEliminar.forEach(function (boton) {
+            boton.addEventListener('click', function () {
+                console.log('Botón eliminar presionado');
+                var producto = this.closest('.producto');
+                producto.remove();
+                carritoContador--;
+                var contadorSpan = document.querySelector(".contador");
+                contadorSpan.textContent = carritoContador.toString();
+            });
+        });
+
+        localStorage.removeItem("carritoProductos");
+    </script>
 </body>
 
 </html>

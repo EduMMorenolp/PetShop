@@ -1,70 +1,81 @@
 {
-    "productos": [
-      {
-        "nombre": "GATI PESCADO Y SALMON",
-        "imagen": "./img/productos/Ofert1.webp",
-        "descripcion": "10% OFF",
-        "precio": "$10"
-      },
-      {
-        "nombre": "EXCELLENT PUPPY",
-        "imagen": "./img/productos/Ofert2.webp",
-        "descripcion": "30% OFF",
-        "precio": "$15"
-      },
-      {
-        "nombre": "PRO PLAN PUPPY MEDIANO",
-        "imagen": "./img/productos/Ofert3.webp",
-        "descripcion": "15% OFF",
-        "precio": "$20"
-      },
-      {
-        "nombre": "Sieger",
-        "imagen": "img/productos/1.webp",
-        "descripcion": "2kg Gratis",
-        "precio": "$150"
-      },
-      {
-        "nombre": "Cat Chow",
-        "imagen": "img/productos/2.webp",
-        "descripcion": "3kg Gratis",
-        "precio": "$180"
-      },
-      {
-        "nombre": "Complete",
-        "imagen": "img/productos/3.webp",
-        "descripcion": "2kg Gratis",
-        "precio": "$118"
-      },
-      {
-        "nombre": "Balanced",
-        "imagen": "img/productos/4.webp",
-        "descripcion": "2kg Gratis",
-        "precio": "$141"
-      },
-      {
-        "nombre": "Dog Selection",
-        "imagen": "img/productos/5.webp",
-        "descripcion": "2kg Gratis",
-        "precio": "$114"
-      },
-      {
-        "nombre": "Eukanuba",
-        "imagen": "img/productos/6.webp",
-        "descripcion": "20% Gratis",
-        "precio": "$135"
-      },
-      {
-        "nombre": "Ken-l",
-        "imagen": "img/productos/7.webp",
-        "descripcion": "3kg Gratis",
-        "precio": "$167"
-      },
-      {
-        "nombre": "Premium",
-        "imagen": "img/productos/8.webp",
-        "descripcion": "2kg Gratis",
-        "precio": "$147"
-      }
-    ]
-  }
+  "productos": [
+    {
+      "id": "01",
+      "nombre": "GATI PESCADO Y SALMON",
+      "imagen": "./img/productos/Ofert1.webp",
+      "descripcion": "10% OFF",
+      "precio": "$10"
+    },
+    {
+      "id": "02",
+      "nombre": "EXCELLENT PUPPY",
+      "imagen": "./img/productos/Ofert2.webp",
+      "descripcion": "30% OFF",
+      "precio": "$15"
+    },
+    {
+      "id": "03",
+      "nombre": "PRO PLAN PUPPY MEDIANO",
+      "imagen": "./img/productos/Ofert3.webp",
+      "descripcion": "15% OFF",
+      "precio": "$20"
+    },
+    {
+      "id": "1",
+      "nombre": "Sieger",
+      "imagen": "img/productos/1.webp",
+      "descripcion": "2kg Gratis",
+      "precio": "$150"
+    },
+    {
+      "id": "2",
+      "nombre": "Cat Chow",
+      "imagen": "img/productos/2.webp",
+      "descripcion": "3kg Gratis",
+      "precio": "$180"
+    },
+    {
+      "id": "3",
+      "nombre": "Complete",
+      "imagen": "img/productos/3.webp",
+      "descripcion": "2kg Gratis",
+      "precio": "$118"
+    },
+    {
+      "id": "4",
+      "nombre": "Balanced",
+      "imagen": "img/productos/4.webp",
+      "descripcion": "2kg Gratis",
+      "precio": "$141"
+    },
+    {
+      "id": "5",
+      "nombre": "Dog Selection",
+      "imagen": "img/productos/5.webp",
+      "descripcion": "2kg Gratis",
+      "precio": "$114"
+    },
+    {
+      "id": "6",
+      "nombre": "Eukanuba",
+      "imagen": "img/productos/6.webp",
+      "descripcion": "20% Gratis",
+      "precio": "$135"
+    },
+    {
+      "id": "7",
+      "nombre": "Ken-l",
+      "imagen": "img/productos/7.webp",
+      "descripcion": "3kg Gratis",
+      "precio": "$167"
+    },
+    {
+      "id": "8",
+      "nombre": "Premium",
+      "imagen": "img/productos/8.webp",
+      "descripcion": "2kg Gratis",
+      "precio": "$147"
+    }
+  ]
+}
