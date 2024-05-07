@@ -221,14 +221,32 @@
             boton.addEventListener('click', function () {
                 console.log('Botón eliminar presionado');
                 var producto = this.closest('.producto');
+
+                // Obtener el ID del producto que se va a eliminar
+                var idProductoEliminar = parseInt(producto.dataset.id);
+
+                // Eliminar el producto del DOM
                 producto.remove();
+
+                // Disminuir el contador y actualizar el contador visualmente
                 carritoContador--;
                 var contadorSpan = document.querySelector(".contador");
                 contadorSpan.textContent = carritoContador.toString();
+
+                // Recuperar el array de productos del localStorage
+                var carritoProductos = JSON.parse(localStorage.getItem("carritoProductos")) || [];
+
+                // Filtrar el array para eliminar el producto correspondiente
+                var carritoProductosActualizado = carritoProductos.filter(function (idProducto) {
+                    return parseInt(idProducto) !== idProductoEliminar;
+                });
+
+                // Almacenar el array actualizado en el localStorage
+                localStorage.setItem("carritoProductos", JSON.stringify(carritoProductosActualizado));
             });
         });
 
-        localStorage.removeItem("carritoProductos");
+
     </script>
 </body>
 

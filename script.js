@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 // BUSCADOR INICIO
 document.getElementById('botonBuscar').addEventListener('click', function () {
     var resultados = document.getElementById('resultados');
@@ -59,6 +57,23 @@ function cargarProductos() {
 
 var carritoProductos = [];
 
+if (carritoProductos.length > 0) {
+    localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
+} else {
+    // Obtener los elementos del almacenamiento local
+    var localStorageItems = JSON.parse(localStorage.getItem("carritoProductos"));
+    // Verificar si hay elementos en el almacenamiento local
+    if (localStorageItems && localStorageItems.length > 0) {
+        // Establecer el contador del carrito en la longitud de los elementos del almacenamiento local
+        var contadorSpan = document.querySelector(".contador");
+        contadorSpan.textContent = localStorageItems.length.toString();
+    } else {
+        // Si no hay elementos en el almacenamiento local, establecer el contador del carrito en 0
+        var contadorSpan = document.querySelector(".contador");
+        contadorSpan.textContent = "0";
+    }
+}
+
 // Almacenar una referencia a la función de manejo de clic
 function agregarAlCarrito(idProducto) {
     console.log("Boton presionado");
@@ -66,6 +81,8 @@ function agregarAlCarrito(idProducto) {
     var valorActual = parseInt(contador.innerText);
     valorActual++;
     contador.innerText = valorActual;
+    // Recuperar el array de productos del localStorage
+    var carritoProductos = JSON.parse(localStorage.getItem("carritoProductos")) || [];
     carritoProductos.push(idProducto);
     localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
     console.log("Producto agregado al carrito. ID:", idProducto);
@@ -146,8 +163,24 @@ function cerrar(event) {
 // Agregar evento de clic al documento para cerrar la ventana emergente
 document.addEventListener("click", cerrar);
 
+// Movimiento de tarjetasOfertas
+document.addEventListener('DOMContentLoaded', function () {
+    const btnIzquierda = document.getElementById('btn-izq');
+    const btnDerecha = document.getElementById('btn-der');
+    const tarjetas = document.querySelectorAll('.tarjetaOfertas');
 
+    btnDerecha.addEventListener('click', () => {
+        const contenedor = document.querySelector('#productosOferta > div');
+        const primerElemento = contenedor.firstElementChild;
+        contenedor.appendChild(primerElemento);
+    })
 
+    btnIzquierda.addEventListener("click", () => {
+        const contenedor = document.querySelector('#productosOferta > div');
+        const ultimoElemento = contenedor.lastElementChild;
+        contenedor.insertBefore(ultimoElemento, contenedor.firstElementChild);
+    })
+})
 
 
 
