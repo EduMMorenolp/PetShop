@@ -197,7 +197,6 @@ h3 {
   padding: 10px;
   width: 28%;
   text-align: center;
-  margin: 1px;
   -webkit-box-shadow: 0px 0px 6px 1px rgba(26, 68, 64, 0.3);
   -moz-box-shadow: 0px 0px 6px 1px rgba(26, 68, 64, 0.3);
   box-shadow: 0px 0px 6px 1px rgba(26, 68, 64, 0.3);
@@ -225,8 +224,8 @@ h3 {
   text-align: center;
 }
 
-.btn-izq,
-.btn-der {
+#btn-izq,
+#btn-der {
   width: 7%;
   height: 100px;
   margin: 5px;

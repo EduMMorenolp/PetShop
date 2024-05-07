@@ -28,8 +28,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-
-
 // BUSCADOR INICIO
 document.getElementById('botonBuscar').addEventListener('click', function () {
     var resultados = document.getElementById('resultados');
@@ -158,8 +156,24 @@ function cerrar(event) {
 // Agregar evento de clic al documento para cerrar la ventana emergente
 document.addEventListener("click", cerrar);
 
+// Movimiento de tarjetasOfertas
+document.addEventListener('DOMContentLoaded', function () {
+    const btnIzquierda = document.getElementById('btn-izq');
+    const btnDerecha = document.getElementById('btn-der');
+    const tarjetas = document.querySelectorAll('.tarjetaOfertas');
 
+    btnDerecha.addEventListener('click', () => {
+        const contenedor = document.querySelector('#productosOferta > div');
+        const primerElemento = contenedor.firstElementChild;
+        contenedor.appendChild(primerElemento);
+    })
 
+    btnIzquierda.addEventListener("click", () => {
+        const contenedor = document.querySelector('#productosOferta > div');
+        const ultimoElemento = contenedor.lastElementChild;
+        contenedor.insertBefore(ultimoElemento, contenedor.firstElementChild);
+    })
+})
 
 
 
