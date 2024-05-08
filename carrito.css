@@ -1,5 +1,5 @@
 /* Estilos para el contenido principal */
-main {
+#listaProductos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -95,6 +95,11 @@ nav ul li a img {
   border-radius: 30%;
   padding: 8px;
   margin-left: 5px;
+}
+
+.consola {
+  display: flex;
+  justify-content: center;
 }
 
 /** Estilos de media query */
