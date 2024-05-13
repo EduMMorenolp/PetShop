@@ -140,28 +140,13 @@ main {
 #listaProductos td {
   border: 1px solid #ddd;
   padding: 8px;
-}
-
-#listaProductos th {
+  width: 15%;
   background-color: #f2f2f2;
   text-align: center;
 }
 
-#listaProductos td {
-  text-align: center;
-}
-
-#listaProductos .eliminar {
-  background-color: #ff4d4d;
-  color: #fff;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  cursor: url("./img/extra/cursor2.svg"), auto;
-}
-
-#listaProductos .eliminar:hover {
-  background-color: #e60000;
+#totalSuma {
+  border: 1px solid black;
 }
 
 /* Estilos para los botones de agregar y quitar productos */

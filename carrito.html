@@ -199,6 +199,8 @@
 
         var tbody = document.querySelector("#listaProductos tbody");
 
+        var sumaTotalProductos = 0;
+
         // Función para agregar productos al carrito en el HTML
         function agregarProductosAlCarritoHTML() {
             tbody.innerHTML = "";
@@ -208,6 +210,7 @@
             });
 
             Object.keys(productosEnCarrito).forEach(function (idProducto) {
+                
                 var producto = productos.productos.find(function (item) {
                     return item.id === idProducto;
                 });
@@ -220,15 +223,28 @@
                     <td> <button class="restar">-</button>
                       ${productosEnCarrito[idProducto]}
                       <button class="sumar">+</button></td>
-                      <td id="sumaPrecios">${calcularSumaPrecios(producto.precio, productosEnCarrito[idProducto])}</td>
+                      <td id="sumaPrecios">$${calcularSumaPrecios(producto.precio, productosEnCarrito[idProducto])}</td>
                         </tr> 
                         `;
-
-                    
                     tbody.insertAdjacentHTML("beforeend", filaHTML);
                 };
+                sumaTotalProductos = sumaTotalProductos + calcularSumaPrecios(producto.precio, productosEnCarrito[idProducto])
             });
+            // Agregar fila para mostrar la suma total
+            var filaSumaTotalHTML = `
+        <tr>
+            <td colspan="3"><strong>Total:</strong></td>
+            <td id="totalSuma"><strong>$${sumaTotalProductos}</strong></td>
+        </tr>`;
+            tbody.insertAdjacentHTML("beforeend", filaSumaTotalHTML);
+            var filaSumaTotalHTML = `
+        <tr>
+            <td colspan="3"></td>
+            <td id="bottonPagar"><button> Pagar </button></td>
+        </tr>`;
+            tbody.insertAdjacentHTML("beforeend", filaSumaTotalHTML);
         };
+
         agregarProductosAlCarritoHTML();
 
         function calcularSumaPrecios(p, c) {
