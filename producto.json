@@ -1,81 +1,81 @@
 {
   "productos": [
     {
-      "id": "01",
+      "id": 91 ,
       "nombre": "GATI PESCADO Y SALMON",
       "imagen": "./img/productos/Ofert1.webp",
       "descripcion": "10% OFF",
-      "precio": "$10"
+      "precio": 10
     },
     {
-      "id": "02",
+      "id": 92,
       "nombre": "EXCELLENT PUPPY",
       "imagen": "./img/productos/Ofert2.webp",
       "descripcion": "30% OFF",
-      "precio": "$15"
+      "precio": 15
     },
     {
-      "id": "03",
+      "id": 93,
       "nombre": "PRO PLAN PUPPY MEDIANO",
       "imagen": "./img/productos/Ofert3.webp",
       "descripcion": "15% OFF",
-      "precio": "$20"
+      "precio": 20
     },
     {
-      "id": "1",
+      "id": 1,
       "nombre": "Sieger",
       "imagen": "img/productos/1.webp",
       "descripcion": "2kg Gratis",
-      "precio": "$150"
+      "precio": 150
     },
     {
-      "id": "2",
+      "id": 2,
       "nombre": "Cat Chow",
       "imagen": "img/productos/2.webp",
       "descripcion": "3kg Gratis",
-      "precio": "$180"
+      "precio": 180
     },
     {
-      "id": "3",
+      "id": 3,
       "nombre": "Complete",
       "imagen": "img/productos/3.webp",
       "descripcion": "2kg Gratis",
-      "precio": "$118"
+      "precio": 118
     },
     {
-      "id": "4",
+      "id": 4,
       "nombre": "Balanced",
       "imagen": "img/productos/4.webp",
       "descripcion": "2kg Gratis",
-      "precio": "$141"
+      "precio": 141
     },
     {
-      "id": "5",
+      "id": 5,
       "nombre": "Dog Selection",
       "imagen": "img/productos/5.webp",
       "descripcion": "2kg Gratis",
-      "precio": "$114"
+      "precio": 114
     },
     {
-      "id": "6",
+      "id":6,
       "nombre": "Eukanuba",
       "imagen": "img/productos/6.webp",
       "descripcion": "20% Gratis",
-      "precio": "$135"
+      "precio": 135
     },
     {
-      "id": "7",
+      "id": 7,
       "nombre": "Ken-l",
       "imagen": "img/productos/7.webp",
       "descripcion": "3kg Gratis",
-      "precio": "$167"
+      "precio": 167
     },
     {
-      "id": "8",
+      "id": 8,
       "nombre": "Premium",
       "imagen": "img/productos/8.webp",
       "descripcion": "2kg Gratis",
-      "precio": "$147"
+      "precio": 147
     }
   ]
 }
