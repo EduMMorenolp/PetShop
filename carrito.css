@@ -1,38 +1,31 @@
-/* Estilos para el contenido principal */
-#listaProductos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Estilos para cada producto */
 .producto {
-    margin: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 200px;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
 }
 
 /* Estilos para la imagen del producto */
 .producto img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 /* Estilos para la descripción del producto */
 .descripcion {
-    text-align: center;
+  text-align: center;
 }
 
 /* Estilos para el botón de eliminar */
 .eliminar {
-    background-color: #ff6347;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /** Estilos para el header */
@@ -106,28 +99,72 @@ nav ul li a img {
 
 /* Pantalla grande (escritorio): */
 @media all and (min-width: 1024px) {
-    body {
-      font-size: 16px;
-    }
+  body {
+    font-size: 16px;
   }
-  /* Pantalla mediana (tabletas): */
-  @media all and (min-width: 768px) and (max-width: 1023px) {
-    body {
-      font-size: 15px;
-    }
+}
+/* Pantalla mediana (tabletas): */
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  body {
+    font-size: 15px;
   }
-  /* Pantalla pequeña (teléfonos): */
-  @media all and (max-width: 767px) {
-    body {
-      font-size: 12px;
-      margin: 1px;
-    }
-  
-    nav ul li {
-      margin-right: 0;
-    }
-  
-    nav ul li a {
-      margin: 3px;
-    }
+}
+/* Pantalla pequeña (teléfonos): */
+@media all and (max-width: 767px) {
+  body {
+    font-size: 12px;
+    margin: 1px;
   }
+
+  nav ul li {
+    margin-right: 0;
+  }
+
+  nav ul li a {
+    margin: 3px;
+  }
+}
+/* Estilos para la tabla de productos en el carrito */
+main {
+  display: flex;
+  justify-content: center;
+}
+
+#listaProductos {
+  width: 95%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#listaProductos th,
+#listaProductos td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  width: 15%;
+  background-color: #f2f2f2;
+  text-align: center;
+}
+
+#totalSuma {
+  border: 1px solid black;
+}
+
+/* Estilos para los botones de agregar y quitar productos */
+.sumar,
+.restar {
+  width: 15%;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: url("./img/extra/cursor2.svg"), auto;
+}
+
+.restar {
+  background-color: #f44336; 
+}
+
+.restar:hover {
+  background-color: #d32f2f;
+}
