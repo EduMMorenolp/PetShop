@@ -149,6 +149,10 @@ main {
   border: 1px solid black;
 }
 
+.cantidad {
+  padding: 10px;
+}
+
 /* Estilos para los botones de agregar y quitar productos */
 .sumar,
 .restar {
@@ -162,9 +166,17 @@ main {
 }
 
 .restar {
-  background-color: #f44336; 
+  background-color: #f44336;
 }
 
 .restar:hover {
   background-color: #d32f2f;
+}
+
+/*Pantalla pequeña (teléfonos): */
+@media all and (max-width: 767px) {
+  .sumar,
+  .restar {
+    width: 100%;
+  }
 }
