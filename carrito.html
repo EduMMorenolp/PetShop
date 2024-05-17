@@ -262,16 +262,12 @@
             boton.addEventListener('click', function () {
 
                 var filaProducto = this.closest('.tablaProducto');
-                console.log(filaProducto)
                 var idProducto = filaProducto.dataset.id;
-                console.log(idProducto)
                 // Disminuir la cantidad del producto en el carrito
                 productosEnCarrito[idProducto] = Math.max(0, (productosEnCarrito[idProducto] || 0) - 1);
 
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
-
-                console.log(cantidadHTML)
 
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
             });
