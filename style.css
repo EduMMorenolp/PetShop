@@ -436,6 +436,9 @@ textarea {
 
 .grid_ubicacion {
   grid-area: ubicacion;
+  position: relative;
+  width: 100%;
+  height: 400px;
 }
 
 .grid_formulario {
@@ -446,6 +449,30 @@ textarea {
 
 .colorIconoRedes {
   fill: #20655d;
+}
+
+.estilos_redes{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+.estilos_redes div {
+  display: flex;
+  align-items: center;
+}
+
+.estilos_redes label {
+  flex-grow: 1;
+  text-align: center; 
+  margin-left: 5px;
+}
+.grid_ubicacion iframe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 90%;
 }
 
 /**Estilo seccion servicios */
