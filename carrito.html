@@ -258,6 +258,8 @@
         var botonesRestar = document.querySelectorAll('.restar');
         var botonesSumar = document.querySelectorAll('.sumar');
 
+        var botonPagar = document.getElementById('bottonPagar')
+
         botonesRestar.forEach(function (boton) {
             boton.addEventListener('click', function () {
 
@@ -268,8 +270,12 @@
 
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
-
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
+
+                
+                // Actualizar el contador del carrito
+                var carritoContador = Object.values(productosEnCarrito).reduce((acc, cantidad) => acc + cantidad, 0);
+                contadorSpan.textContent = carritoContador.toString();
             });
         });
 
@@ -284,8 +290,21 @@
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
+
+                // Actualizar el contador del carrito
+                var carritoContador = Object.values(productosEnCarrito).reduce((acc, cantidad) => acc + cantidad, 0);
+                contadorSpan.textContent = carritoContador.toString();
+
             });
         });
+
+        botonPagar.addEventListener('click', () => {
+            carritoProductos = [];
+
+            localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
+
+            location.reload();
+        })
     </script>
 </body>
 
