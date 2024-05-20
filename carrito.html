@@ -270,8 +270,12 @@
 
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
-
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
+
+                
+                // Actualizar el contador del carrito
+                var carritoContador = Object.values(productosEnCarrito).reduce((acc, cantidad) => acc + cantidad, 0);
+                contadorSpan.textContent = carritoContador.toString();
             });
         });
 
@@ -286,9 +290,14 @@
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
+
+                // Actualizar el contador del carrito
+                var carritoContador = Object.values(productosEnCarrito).reduce((acc, cantidad) => acc + cantidad, 0);
+                contadorSpan.textContent = carritoContador.toString();
+
             });
         });
-    
+
         botonPagar.addEventListener('click', () => {
             carritoProductos = [];
 
