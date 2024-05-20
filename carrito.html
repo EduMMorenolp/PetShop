@@ -210,7 +210,7 @@
             });
 
             Object.keys(productosEnCarrito).forEach(function (idProducto) {
-                
+
                 var producto = productos.productos.find(function (item) {
                     return item.id === idProducto;
                 });
@@ -220,8 +220,9 @@
                 <tr class="tablaProducto" data-id="${producto.id}">
                     <td>${producto.nombre}</td>
                     <td>$${producto.precio}</td>
-                    <td> <button class="restar">-</button>
+                    <td> <button class="restar">-</button><strong class="cantidad">
                       ${productosEnCarrito[idProducto]}
+                      </strong>
                       <button class="sumar">+</button></td>
                       <td id="sumaPrecios">$${calcularSumaPrecios(producto.precio, productosEnCarrito[idProducto])}</td>
                         </tr> 
@@ -252,54 +253,22 @@
             return suma
         };
 
-        /** SCRIPT TEMPORAL DE BORRADO */
-        // Obtener todos los botones de eliminar
-        var botonesEliminar = document.querySelectorAll('.eliminar');
-
-        botonesEliminar.forEach(function (boton) {
-            boton.addEventListener('click', function () {
-                console.log('Botón eliminar presionado');
-                var filaProducto = this.closest('.tablaProducto');
-
-                // Obtener el ID del producto que se va a eliminar
-                var idProductoEliminar = filaProducto.dataset.id;
-
-                // Disminuir el contador y actualizar el contador visualmente
-                carritoContador--;
-                var contadorSpan = document.querySelector(".contador");
-                contadorSpan.textContent = carritoContador.toString();
-
-                // Recuperar el array de productos del localStorage
-                var carritoProductos = JSON.parse(localStorage.getItem("carritoProductos")) || [];
-
-                // Encontrar el índice del primer elemento con el ID a eliminar
-                var indiceEliminar = carritoProductos.findIndex(function (idProducto) {
-                    return idProducto === idProductoEliminar;
-                });
-
-                // Si se encuentra el índice del producto a eliminar, eliminarlo del array
-                if (indiceEliminar !== -1) {
-                    carritoProductos.splice(indiceEliminar, 1);
-                    // Almacenar el array actualizado en el localStorage
-                    localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
-                };
-
-            });
-        });
+        /** Botones Sumar y restar Productos */
 
         var botonesRestar = document.querySelectorAll('.restar');
         var botonesSumar = document.querySelectorAll('.sumar');
 
         botonesRestar.forEach(function (boton) {
             boton.addEventListener('click', function () {
+
                 var filaProducto = this.closest('.tablaProducto');
                 var idProducto = filaProducto.dataset.id;
-
                 // Disminuir la cantidad del producto en el carrito
                 productosEnCarrito[idProducto] = Math.max(0, (productosEnCarrito[idProducto] || 0) - 1);
 
                 // Actualizar la cantidad en el HTML
                 var cantidadHTML = filaProducto.querySelector('.cantidad');
+
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
             });
         });
