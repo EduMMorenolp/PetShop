@@ -258,6 +258,8 @@
         var botonesRestar = document.querySelectorAll('.restar');
         var botonesSumar = document.querySelectorAll('.sumar');
 
+        var botonPagar = document.getElementById('bottonPagar')
+
         botonesRestar.forEach(function (boton) {
             boton.addEventListener('click', function () {
 
@@ -286,6 +288,14 @@
                 cantidadHTML.textContent = productosEnCarrito[idProducto].toString();
             });
         });
+    
+        botonPagar.addEventListener('click', () => {
+            carritoProductos = [];
+
+            localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
+
+            location.reload();
+        })
     </script>
 </body>
 
