@@ -36,13 +36,43 @@
         </nav>
     </header>
 
+    <!-- Modal Iniciar Sesión -->
+    <div id="modalIniciarSesion" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeSesion">&times;</span>
+            <h2>Iniciar Sesión</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Registrarse -->
+    <div id="modalRegistrarse" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeRegistro">&times;</span>
+            <h2>Registrarse</h2>
+            <form>
+                <label for="reg-email">Email:</label>
+                <input type="email" id="reg-email" name="email" required>
+                <label for="reg-password">Contraseña:</label>
+                <input type="password" id="reg-password" name="password" required>
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+
     <main>
         <section class="user-nav">
             <div>
-                <button class="inicioSesion">
+                <button id="inicioSesionid" class="inicioSesion">
                     Iniciar sesión
                 </button>
-                <button class="registrarse">
+                <button id="registrarseid" class="registrarse">
                     Registrarse
                 </button>
             </div>
