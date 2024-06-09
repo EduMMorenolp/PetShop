@@ -505,6 +505,20 @@ textarea {
   opacity: 1;
 }
 
+/* Estilo específico para la navegación de usuario */
+
+.user-nav div {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.inicioSesion,
+.registrarse {
+  padding: 8px;
+}
+
 /** Estilos de media query */
 
 /* Pantalla grande (escritorio): */
