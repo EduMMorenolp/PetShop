@@ -183,38 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    const bottonIniciarSesion = document.getElementById('inicioSesionid');
-    const bottonRegistrarse = document.getElementById('registrarseid');
-    const modalIniciarSesion = document.getElementById('modalIniciarSesion');
-    const modalRegistrarse = document.getElementById('modalRegistrarse');
-    const closeSesion = document.getElementById('closeSesion');
-    const closeRegistro = document.getElementById('closeRegistro');
 
-    bottonIniciarSesion.addEventListener('click', function () {
-        modalIniciarSesion.style.display = 'block';
-    });
-
-    bottonRegistrarse.addEventListener('click', function () {
-        modalRegistrarse.style.display = 'block';
-    });
-
-    closeSesion.addEventListener('click', function () {
-        modalIniciarSesion.style.display = 'none';
-    });
-
-    closeRegistro.addEventListener('click', function () {
-        modalRegistrarse.style.display = 'none';
-    });
-
-    window.addEventListener('click', function (event) {
-        if (event.target == modalIniciarSesion) {
-            modalIniciarSesion.style.display = 'none';
-        } else if (event.target == modalRegistrarse) {
-            modalRegistrarse.style.display = 'none';
-        }
-    });
-});
 
 
 

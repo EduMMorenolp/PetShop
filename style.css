@@ -572,7 +572,8 @@ textarea {
 }
 
 .modal input[type="email"],
-.modal input[type="password"] {
+.modal input[type="password"],
+.modal input[type="text"] {
   width: calc(100% - 20px);
   padding: 10px;
   margin-bottom: 10px;
