@@ -185,101 +185,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // MisterEgg
 var secuenciaDeseada = ['ArrowUp', 'ArrowRight', 'ArrowRight', 'ArrowUp', 'ArrowLeft'];
 var teclasPresionadas = [];
@@ -296,3 +201,42 @@ document.addEventListener('keydown', function (event) {
     teclasPresionadas.push(event.key);
     verificarSecuencia();
 });
+//Traer productos del backend y crear grid en frontend
+const url ='http://localhost:3000/productos'
+fetch(url)
+    .then(response => response.json())
+    .then(data => mostrarDatos(data))
+    .catch(error => console.log(error))
+    
+    const mostrarDatos = (data )=> {
+    
+    let html = ''
+    for (let i = 0; i<data.length;i++){
+        html +=`
+        <div class="productos">
+                <div class="producto ">
+                    <div class="img_producto previsual" data-id="1">
+                        <div class="oferta">
+                            <p>${data[i].descripcion}</p>
+                        </div>
+                        <div>
+                            <img src="${data[i].imagen}" alt="Producto 1">
+                        </div>
+                    </div>
+                    <div class="detalles">
+                        <hr>
+                        <h3>${data[i].nombre}</h3>
+
+                        <p><strong>$${data[i].nombre}</strong></p>
+                        <button class="addCarrito" data-id="1">Agregar al carrito</button>
+                    </div>
+
+                </div>
+     
+        </div>
+        `
+
+    }
+    document.querySelector('.productos').innerHTML= html
+}
+         
