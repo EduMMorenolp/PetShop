@@ -2,6 +2,8 @@
 
 PetShop es un proyecto para una tienda virtual de productos para mascotas. Este repositorio contiene los archivos necesarios para el desarrollo del sitio web, incluyendo HTML, CSS y JavaScript.
 
+## [Link Repositorio Backend PetShopAPI](https://github.com/EduMMorenolp/PetShopAPI)
+
 ## Contenido
 
 - [Descripción](#petshop)
