@@ -296,3 +296,129 @@ document.addEventListener('keydown', function (event) {
     teclasPresionadas.push(event.key);
     verificarSecuencia();
 });
+//Traer productos del backend y crear grid en frontend
+const url ='http://localhost:3000/productos'
+const categoria='http://localhost:3000/categorias'
+let productos = [];
+
+// Fetch para obtener las categorías
+
+// Fetch para obtener las categorías y los productos
+fetch(categoria)
+    .then(response => response.json())
+    .then(categorias => {
+        llenarCategorias(categorias);
+        return fetch(url);
+    })
+    .then(response => response.json())
+    .then(data => {
+        productos = data;
+        mostrarDatos(productos);
+    })
+    .catch(error => console.log(error));
+
+// Función para llenar el select de categorías
+const llenarCategorias = (categorias) => {
+    const categoryFilter = document.getElementById('categoryFilter');
+    categorias.forEach(categoria => {
+        const option = document.createElement('option');
+        option.value = categoria.id;
+        option.textContent = categoria.nombre;
+        categoryFilter.appendChild(option);
+    });
+};
+
+// Event Listener para el filtro de categorías
+document.getElementById('categoryFilter').addEventListener('change', (event) => {
+    const selectedCategory = event.target.value;
+    const filteredProducts = selectedCategory === 'all'
+        ? productos
+        : productos.filter(producto => producto.categoria_id == selectedCategory); // Compara con categoria_id
+    mostrarDatos(filteredProducts);
+});
+
+// Función para mostrar los datos de los productos
+const mostrarDatos = (data) => {
+    let html = '';
+    data.forEach(producto => {
+        html += `
+        <div class="producto">
+            <div class="img_producto previsual" data-id="${producto.id}">
+                <div class="oferta">
+                    <p>${producto.descripcion}</p>
+                </div>
+                <div>
+                    <img src="${producto.imagen}" alt="Producto ${producto.id}">
+                </div>
+            </div>
+            <div class="detalles">
+                <hr>
+                <h3>${producto.nombre}</h3>
+                <p><strong>$${producto.precio}</strong></p>
+                <button class="addCarrito" data-id="${producto.id}">Agregar al carrito</button>
+            </div>
+        </div>
+        `;
+    });
+    document.querySelector('.productos').innerHTML = html;
+};
+
+// fetch(categoria)
+//     .then(response => response.json())
+//     .then(categorias => llenarCategorias(categorias))
+//     .catch(error => console.log(error));
+//     const llenarCategorias = (categorias) => {
+//         const categoryFilter = document.getElementById('categoryFilter');
+//         categorias.forEach(categoria => {
+//             const option = document.createElement('option');
+//             option.value = categoria.nombre;
+//             option.textContent = categoria.nombre;
+//             categoryFilter.appendChild(option);
+//             console.log(categoria.nombre)
+//         });
+//     }
+    
+//     document.getElementById('categoryFilter').addEventListener('change', (event) => {
+//         const selectedCategory = event.target.value;
+//         const filteredProducts = selectedCategory === 'all'
+//             ? productos
+//             : productos.filter(producto => producto.categoria === selectedCategory);
+//         mostrarDatos(filteredProducts);
+//     });
+
+// fetch(url)
+//     .then(response => response.json())
+//     .then(data => mostrarDatos(data))
+//     .catch(error => console.log(error))
+
+// const mostrarDatos = (data )=> {
+//     console.log(data)
+//     let html = ''
+//     for (let i = 0; i<data.length;i++){
+//         html +=`
+//         <div class="productos">
+//                 <div class="producto ">
+//                     <div class="img_producto previsual" data-id="1">
+//                         <div class="oferta">
+//                             <p>${data[i].descripcion}</p>
+//                         </div>
+//                         <div>
+//                             <img src="${data[i].imagen}" alt="Producto 1">
+//                         </div>
+//                     </div>
+//                     <div class="detalles">
+//                         <hr>
+//                         <h3>${data[i].nombre}</h3>
+
+//                         <p><strong>$${data[i].nombre}</strong></p>
+//                         <button class="addCarrito" data-id="1">Agregar al carrito</button>
+//                     </div>
+
+//                 </div>
+     
+//         </div>
+//         `
+
+//     }
+//     document.querySelector('.productos').innerHTML= html
+// }

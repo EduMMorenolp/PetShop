@@ -269,6 +269,32 @@ h3 {
 }
 
 /** Estilos de Seccion PRODUCTOS */
+/* filtro*/
+.filtro {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+.filtro_box {
+  display: flex;
+  background-color: #20655d;
+  padding: 5px;
+  border-radius: 5%;
+  color: #f2fbf9;
+  font-size: medium;
+  font-family: "Comic Neue", cursive;
+   
+}
+
+
+
+.filtro select {
+  background-color: #0b2826;
+  color: #ccc;
+  font-family: "Comic Neue", cursive;
+  font-size: medium;
+  
+}
 .producto img {
   width: 100%;
   height: auto;
