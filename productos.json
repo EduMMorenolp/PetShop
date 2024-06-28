@@ -86,5 +86,44 @@
       "categoria": "perro",
       "descripcion": "lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla.lorem ipsum, dolor sit amet consecteturadipisicing elit. Minus, nulla."
     }
+    
+  }
+  ,
+  {
+    "id": 91 ,
+    "nombre": "GATI PESCADO Y SALMON",
+    "imagen": "Ofert1",
+    "detalles":{
+      "peso":18,
+      "precio": 10,
+      "categoria":"Gato",
+      "descripcion": "10% OFF Por Tiempo limitado"
+      
+    }
+  },
+  {
+    "id": 92,
+    "nombre": "EXCELLENT PUPPY",
+    "imagen": "Ofert2",
+    "detalles":{
+      "peso":15,
+      "precio": 15,
+      "categoria":"perro",
+      "descripcion": "30% OFF Por Tiempo limitado"
+      
+    }
+    
+  },
+  {
+    "id": 93,
+    "nombre": "PRO PLAN PUPPY MEDIANO",
+    "imagen": "Ofert3",
+    "detalles":{
+      "peso":10,
+      "precio": 20,
+      "categoria":"perro",
+      "descripcion": "15% OFF Por Tiempo limitado"
+      
+    }
   }
 ]

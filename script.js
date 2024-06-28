@@ -107,57 +107,6 @@ botones.forEach(function (boton) {
     });
 });
 
-// Modificar la función abrir para limpiar los event listeners antes de agregar nuevos
-function abrir(event) {
-    const productoId = event.currentTarget.getAttribute("data-id");
-    cargarProductos()
-        .then(productos => {
-            const producto = productos.find(item => item.id === parseInt(productoId));
-            const htmlContent = `
-                <div class="ventana">
-                <div class="imagen">
-                    <img src="./img/productos/${producto.imagen}.webp" alt="Imagen del producto">
-                </div>
-                <div class="detalles">
-                    <h2>${producto.nombre}</h2>
-                    <p>Categoria: ${producto.detalles.categoria}</p>
-                    <p>Peso: ${producto.detalles.peso} Kg</p>
-                    <p>Precio:$${producto.detalles.precio}</p>
-                    
-                    <p>${producto.detalles.descripcion}</p>
-                </div>
-                </div>
-            `;
-            const fondoPrevia = document.getElementById("Vista-previa");
-            const vistaPrevia = document.getElementById("Vista-previa");
-            vistaPrevia.innerHTML = htmlContent;
-            vistaPrevia.style.display = "block";
-            fondoPrevia.previousElementSibling.style.display = "block"
-
-            // Limpiar event listeners anteriores antes de agregar nuevos
-            limpiarEventListeners();
-        })
-        .catch(error => console.error(error));
-}
-
-// Ventana por cada producto
-const productosElements = document.getElementsByClassName("img_producto");
-for (let i = 0; i < productosElements.length; i++) {
-    productosElements[i].addEventListener("click", abrir);
-}
-
-// Cerrar la ventana emergente
-function cerrar(event) {
-    const vistaPrevia = document.getElementById("Vista-previa");
-    const fondoPrevio = document.getElementById('fondo-vista-previa');
-    if (!vistaPrevia.contains(event.target)) {
-        vistaPrevia.style.display = "none";
-        fondoPrevio.style.display = 'none';
-    }
-}
-
-// Agregar evento de clic al documento para cerrar la ventana emergente
-document.addEventListener("click", cerrar);
 
 // Movimiento de tarjetasOfertas
 document.addEventListener('DOMContentLoaded', function () {
@@ -182,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const url ='http://localhost:3000/'
 let productos = [];
 
-// Fetch para obtener las categorías
+
 
 // Fetch para obtener las categorías y los productos
 fetch(`${url}categorias`)
@@ -223,8 +172,8 @@ const mostrarDatos = (data) => {
     let html = '';
     data.forEach(producto => {
         html += `
-        <div class="producto">
-            <div class="img_producto previsual" data-id="${producto.id}">
+        <div class="producto " >
+            <div class="img_producto previsual" data-id="${producto.id}" >
                 <div class="oferta">
                     <p>${producto.descripcion}</p>
                 </div>
@@ -242,7 +191,63 @@ const mostrarDatos = (data) => {
         `;
     });
     document.querySelector('.productos').innerHTML = html;
+     // Agregar event listeners a los elementos .img_producto después de actualizar el HTML
+     document.querySelectorAll('.img_producto').forEach(imgProducto => {
+        imgProducto.addEventListener('click', abrir);
+    });
 };
+
+
+// Abrir ventana de producto
+function abrir(event) {
+    const productoId = event.currentTarget.getAttribute("data-id");
+    cargarProductos()
+        .then(productos => {
+            const producto = productos.find(item => item.id === parseInt(productoId));
+            const htmlContent = `
+                <div class="ventana">
+                <div class="imagen">
+                    <img src="./img/productos/${producto.imagen}.webp" alt="Imagen del producto">
+                </div>
+                <div class="detalles">
+                    <h2>${producto.nombre}</h2>
+                    <p>Categoria: ${producto.detalles.categoria}</p>
+                    <p>Peso: ${producto.detalles.peso} Kg</p>
+                    <p>Precio:$${producto.detalles.precio}</p>
+                    
+                    <p>${producto.detalles.descripcion}</p>
+                    <button class="addCarrito" data-id="${producto.id}">Agregar al carrito</button>
+                </div>
+                </div>
+            `;
+            const fondoPrevia = document.getElementById("Vista-previa");
+            const vistaPrevia = document.getElementById("Vista-previa");
+            vistaPrevia.innerHTML = htmlContent;
+            vistaPrevia.style.display = "block";
+            fondoPrevia.previousElementSibling.style.display = "block"
+
+            // Limpiar event listeners anteriores antes de agregar nuevos
+            limpiarEventListeners();
+             var botones = document.querySelectorAll(".addCarrito");
+            botones.forEach(function (boton) {
+                boton.addEventListener("click", agregarAlCarrito);
+            });
+            
+        })
+        .catch(error => console.error(error));
+}
+
+// Cerrar la ventana producto
+function cerrar(event) {
+    const vistaPrevia = document.getElementById("Vista-previa");
+    const fondoPrevio = document.getElementById('fondo-vista-previa');
+    if (!vistaPrevia.contains(event.target)) {
+        vistaPrevia.style.display = "none";
+        fondoPrevio.style.display = 'none';
+    }
+}
+document.addEventListener("click", cerrar);
+
 
 
 
