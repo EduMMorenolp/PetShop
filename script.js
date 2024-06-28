@@ -83,7 +83,12 @@ function agregarAlCarrito(idProducto) {
     contador.innerText = valorActual;
     // Recuperar el array de productos del localStorage
     var carritoProductos = JSON.parse(localStorage.getItem("carritoProductos")) || [];
-    carritoProductos.push(idProducto);
+    if (idProducto instanceof PointerEvent) {
+        carritoProductos.push(idProducto.currentTarget.dataset.id);
+    } else {
+        console.log(idProducto)
+        carritoProductos.push(idProducto);
+    }
     localStorage.setItem("carritoProductos", JSON.stringify(carritoProductos));
     console.log("Producto agregado al carrito. ID:", idProducto);
 }
@@ -129,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Traer productos del backend y crear grid en frontend
 const url = ' https://edudev.alwaysdata.net/petshopAPI/'
+// const url = 'http://localhost:3000/'
 let productos = [];
 
 
