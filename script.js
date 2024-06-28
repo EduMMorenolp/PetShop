@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 //Traer productos del backend y crear grid en frontend
-const url ='http://localhost:3000/'
+const url = ' https://edudev.alwaysdata.net/petshopAPI/'
 let productos = [];
 
 
@@ -191,8 +191,8 @@ const mostrarDatos = (data) => {
         `;
     });
     document.querySelector('.productos').innerHTML = html;
-     // Agregar event listeners a los elementos .img_producto después de actualizar el HTML
-     document.querySelectorAll('.img_producto').forEach(imgProducto => {
+    // Agregar event listeners a los elementos .img_producto después de actualizar el HTML
+    document.querySelectorAll('.img_producto').forEach(imgProducto => {
         imgProducto.addEventListener('click', abrir);
     });
 };
@@ -228,11 +228,11 @@ function abrir(event) {
 
             // Limpiar event listeners anteriores antes de agregar nuevos
             limpiarEventListeners();
-             var botones = document.querySelectorAll(".addCarrito");
+            var botones = document.querySelectorAll(".addCarrito");
             botones.forEach(function (boton) {
                 boton.addEventListener("click", agregarAlCarrito);
             });
-            
+
         })
         .catch(error => console.error(error));
 }
