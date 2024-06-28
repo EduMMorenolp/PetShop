@@ -134,17 +134,11 @@ let productos = [];
 
 
 // Fetch para obtener las categorías y los productos
-fetch(`${url}categorias`, {
-    method: 'GET',
-    mode: 'no-cors'
-})
+fetch(`${url}categorias`)
     .then(response => response.json())
     .then(categorias => {
         llenarCategorias(categorias);
-        return fetch(`${url}productos`, {
-            method: 'GET',
-            mode: 'no-cors'
-        });
+        return fetch(`${url}productos`);
     })
     .then(response => response.json())
     .then(data => {
